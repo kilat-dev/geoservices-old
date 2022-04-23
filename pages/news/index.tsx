@@ -1,6 +1,6 @@
 import News from "module/News/NewsList";
 import BasicLayout from "module/BasicLayout";
-import { PageType } from "pages/types";
+import { PageType } from "module/types";
 import { default as PAGE } from "pageConstant/news";
 
 const NewsPage: PageType = News;

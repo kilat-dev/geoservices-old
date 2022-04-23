@@ -1,6 +1,6 @@
 import Search from "module/Search";
 import BasicLayout from "module/BasicLayout";
-import { PageType } from "pages/types";
+import { PageType } from "module/types";
 import { GetServerSidePropsContext } from "next";
 import { SEARCH as PAGE } from "pageConstant";
 

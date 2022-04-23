@@ -1,7 +1,7 @@
 import { BasePage } from "module/BasePage";
 import React from "react";
 import "../styles/globals.css";
-import { MyAppProps } from "./types";
+import { MyAppProps } from "../module/types";
 
 /**
  * Main App render function.
