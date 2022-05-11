@@ -1,42 +1,100 @@
 import React from "react";
-import logo from "assets/logo1.png";
-import { Row, Container } from "@nextui-org/react";
-import Image from "next/image";
+import imgBackground from "assets/bg-energyevolution.png";
+import imgCart from "assets/cart-vector.png";
+import imgResearch from "assets/research-vector.png";
+import imgSearch from "assets/search-vector.png";
+import {
+  Text,
+  Container,
+  Image,
+  Row,
+  Col,
+  Spacer,
+  Card,
+} from "@nextui-org/react";
+// import Image from "next/image";
 import TextLink from "components/TextLink";
 
 const Sandbox = () => {
   return (
-    <Row justify="space-between" align="center">
-      <Container>
-        <Image
-          src={logo?.src}
-          width="266px"
-          height="63px"
-          alt="logo"
-          objectFit="initial"
-        />
-      </Container>
+    <Container xl css={{ p: 0 }}>
+      <Image
+        src={imgBackground.src}
+        objectFit="fill"
+        height="834px"
+        containerCss={{
+          borderRadius: "0",
+          linearGradient: `90.35deg, rgba(0, 0, 0, 0.608) 39.67%,
+              rgba(0, 0, 0, 0) 90.6%, rgba(255, 255, 255, 0.435031) 90.6%`,
+        }}
+        css={{ zIndex: "-1", opacity: 0.8 }}
+      />
+      <Container
+        css={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+        }}
+      >
+        <Row
+          css={{
+            position: "relative",
+            paddingTop: "215px",
+            paddingLeft: "120px",
+            display: "grid",
+            gridAutoRows: "1fr",
+            gridTemplateColumns: "351px 526px",
+          }}
+          gap={1}
+        >
+          {/* left side */}
+          <Col>
+            <Text
+              css={{
+                fontSize: "60px",
+                fontWeight: "800",
+                lineHeight: "76px",
+                letterSpacing: "0em",
+                textAlign: "left",
+                color: "$white",
+              }}
+            >
+              The Energy Evolution
+            </Text>
 
-      <Container>
-        <Row justify="flex-end" gap={1}>
-          <TextLink fontSize="tiny" href="">
-            Career
-          </TextLink>
-          <TextLink fontSize="tiny" href="">
-            About Us
-          </TextLink>
-          <TextLink fontSize="tiny" href="">
-            Contact
-          </TextLink>
-        </Row>
-        <Row justify="flex-end" gap={1}>
-          <TextLink href="">Oil and Gas</TextLink>
-          <TextLink href="">Coal and Minerals</TextLink>
-          <TextLink href="">Geothermal</TextLink>
-          <TextLink href="">Trade and Services</TextLink>
+            <Spacer y={1} />
+            <Card css={{ height: "3px", backgroundColor: "#D3252C" }} />
+          </Col>
+
+          {/* right side */}
+          <Col
+            css={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              paddingTop: "25px",
+              height: "100%",
+            }}
+          >
+            <Text
+              css={{
+                top: "25px",
+                fontStyle: "normal",
+                fontWeight: "400",
+                fontSize: "20px",
+                lineHeight: "25px",
+                color: "#FFFFFF",
+              }}
+            >
+              We have a solid base of expertise covering all aspects of the
+              exploration and development of Indonesia’s oil, gas, coal,
+              mineral, and geothermal industries.
+            </Text>
+            <Text>View More</Text>
+          </Col>
         </Row>
       </Container>
-    </Row>
+    </Container>
   );
 };
 
