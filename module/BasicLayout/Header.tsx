@@ -8,7 +8,7 @@ import Dot from "components/Dot";
 
 const Header = () => {
   return (
-    <Container>
+    <Container xl css={{ m: 0, p: 0, position: "fixed" }}>
       <Row justify="space-between" align="center">
         <Container>
           <Image

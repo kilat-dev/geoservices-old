@@ -2,10 +2,13 @@ import { Container, Link } from "@nextui-org/react";
 import NextLink from "next/link";
 import React from "react";
 import * as PAGES from "pageConstant";
+import EnergyEvolutionSection from "./EnergyEvolutionSection";
 
 const Home = () => {
   return (
     <>
+      <EnergyEvolutionSection />
+
       <Container>
         <NextLink href={PAGES.HOME.url} passHref>
           <Link>Home</Link>

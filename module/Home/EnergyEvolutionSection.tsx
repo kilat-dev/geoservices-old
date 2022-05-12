@@ -14,7 +14,7 @@ import {
 } from "@nextui-org/react";
 import { BsArrowRight } from "react-icons/bs";
 
-const Sandbox = () => {
+const EnergyEvolutionSection = () => {
   return (
     <>
       <Container xl css={{ p: 0 }}>
@@ -95,13 +95,19 @@ const Sandbox = () => {
                 clickable
                 css={{
                   width: "fit-content",
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
                 }}
               >
-                <Text css={{ mr: "$10" }}>View More</Text>
-                <BsArrowRight color="#EC1C24" />
+                <Container
+                  css={{
+                    width: "fit-content",
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                  }}
+                >
+                  <Text css={{ mr: "$10" }}>View More</Text>
+                  <BsArrowRight color="#EC1C24" />
+                </Container>
               </Card>
             </Col>
           </Row>
@@ -310,4 +316,4 @@ const Sandbox = () => {
   );
 };
 
-export default Sandbox;
+export default EnergyEvolutionSection;
