@@ -3,11 +3,13 @@ import NextLink from "next/link";
 import React from "react";
 import * as PAGES from "pageConstant";
 import EnergyEvolutionSection from "./EnergyEvolutionSection";
+import OurSpecialtySection from "./OurSpecialtySection";
 
 const Home = () => {
   return (
     <>
       <EnergyEvolutionSection />
+      <OurSpecialtySection />
 
       <Container>
         <NextLink href={PAGES.HOME.url} passHref>
