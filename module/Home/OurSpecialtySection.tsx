@@ -169,7 +169,7 @@ const OurSpecialtySection = () => {
                 letterSpacing: "0.01em",
               }}
             >
-              MNERAL LABORATORY
+              MINERAL LABORATORY
             </Text>
           </Row>
           <Spacer y={1} />

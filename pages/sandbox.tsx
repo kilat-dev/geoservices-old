@@ -1,329 +1,89 @@
 import React from "react";
-import imgBackground1 from "assets/bg-coal1.png";
-import imgBackground2 from "assets/bg-coal2.png";
-import imgBackground3 from "assets/bg-coal3.png";
-import imgCart from "assets/cart2-vector.png";
-import {
-  Text,
-  Container,
-  Image,
-  Row,
-  Col,
-  Spacer,
-  Card,
-} from "@nextui-org/react";
-import { BsArrowRight } from "react-icons/bs";
+import logo from "assets/logo1.png";
+import { Container, Row, Spacer, Text } from "@nextui-org/react";
+import Image from "next/image";
 
-const Sandbox = () => {
+const Footer = () => {
   return (
-    <>
-      <Container xl css={{ p: 0, overflow: "hidden" }}>
-        {/* CARD TITLE */}
-        <Row align="center" gap={4} css={{ my: "$6" }}>
-          <Card
-            css={{ width: "56px", height: "3px", backgroundColor: "#363C9A" }}
-          />
-          <Text
-            css={{
-              fontFamily: "Inter",
-              fontStyle: "normal",
-              fontWeight: "300",
-              fontSize: "50px",
-              lineHeight: "61px",
-              color: "#BDBDBD",
-            }}
-          >
-            Our Specialties
-          </Text>
-        </Row>
-
-        {/* CARD 1 */}
-        <Row
+    <Row
+      css={{
+        my: "$10",
+        display: "grid",
+        gridAutoRows: "1fr",
+        gridTemplateColumns: "50% 1fr 1fr",
+      }}
+    >
+      <Row
+        css={{
+          width: "fit-content",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <Image
+          src={logo?.src}
+          width="266px"
+          height="63px"
+          alt="logo"
+          objectFit="initial"
+        />
+        <Text
           css={{
-            display: "grid",
-            gridAutoRows: "1fr",
-            gridTemplateColumns: "55% 1fr",
+            fontFamily: "Plus Jakarta Sans",
+            fontStyle: "normal",
+            fontWeight: "500",
+            fontSize: "16px",
+            lineHeight: "20px",
           }}
         >
-          <Col>
-            <Image
-              src={imgBackground1.src}
-              objectFit="contain"
-              containerCss={{
-                borderRadius: "0",
-              }}
-            />
-          </Col>
-          <Col
-            css={{
-              p: "$10",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <Row align="center">
-              <Image
-                width={109}
-                height={98}
-                src={imgCart?.src}
-                containerCss={{ m: 0 }}
-              />
-            </Row>
+          Copyright © 2022 - PT Geoservices
+        </Text>
+      </Row>
 
-            <Row>
-              <Text
-                css={{
-                  mx: "$7",
-                  color: "#363C9A",
-                  fontFamily: "Inter",
-                  fontStyle: "normal",
-                  fontWeight: "700",
-                  fontSize: "16px",
-                  lineHeight: "19px",
-                  letterSpacing: "0.01em",
-                }}
-              >
-                COAL LABORATORY
-              </Text>
-            </Row>
-            <Spacer y={1} />
-
-            <Row>
-              <Text
-                css={{
-                  color: "#BDBDBD",
-                  fontFamily: "Inter",
-                  fontStyle: "normal",
-                  fontWeight: "400",
-                  fontSize: "20px",
-                  lineHeight: "24px",
-                  mx: "$7",
-                }}
-              >
-                Highly trained and experienced Indonesian staff perform all work
-                in duplicate, in accordance with internationally accepted
-                standards: ASTM, British Standard (BS), and International
-                Standards (ISO), that was the Geoservices coal laboratory begin.
-              </Text>
-            </Row>
-
-            <Row align="flex-end" css={{ height: "100%" }}>
-              <Card
-                clickable
-                shadow={false}
-                css={{
-                  width: "fit-content",
-                }}
-              >
-                <Container
-                  css={{
-                    width: "fit-content",
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                  }}
-                >
-                  <Text css={{ mr: "$10" }}>View More</Text>
-                  <BsArrowRight color="#EC1C24" />
-                </Container>
-              </Card>
-            </Row>
-          </Col>
-        </Row>
-
-        {/* CARD 2 */}
-        <Row
-          css={{
-            display: "grid",
-            gridAutoRows: "1fr",
-            gridTemplateColumns: "1fr 55%",
-          }}
-        >
-          <Col
-            css={{
-              p: "$10",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <Row align="center">
-              <Image
-                width={109}
-                height={98}
-                src={imgCart?.src}
-                containerCss={{ m: 0 }}
-              />
-            </Row>
-
-            <Row>
-              <Text
-                css={{
-                  mx: "$7",
-                  color: "#363C9A",
-                  fontFamily: "Inter",
-                  fontStyle: "normal",
-                  fontWeight: "700",
-                  fontSize: "16px",
-                  lineHeight: "19px",
-                  letterSpacing: "0.01em",
-                }}
-              >
-                MNERAL LABORATORY
-              </Text>
-            </Row>
-            <Spacer y={1} />
-
-            <Row>
-              <Text
-                css={{
-                  color: "#BDBDBD",
-                  fontFamily: "Inter",
-                  fontStyle: "normal",
-                  fontWeight: "400",
-                  fontSize: "20px",
-                  lineHeight: "24px",
-                  mx: "$7",
-                }}
-              >
-                Highly trained and experienced Indonesian staff perform all work
-                in duplicate, in accordance with internationally accepted
-                standards: ASTM, British Standard (BS), and International
-                Standards (ISO), that was the Geoservices coal laboratory begin.
-              </Text>
-            </Row>
-
-            <Row align="flex-end" css={{ height: "100%" }}>
-              <Card
-                clickable
-                shadow={false}
-                css={{
-                  width: "fit-content",
-                }}
-              >
-                <Container
-                  css={{
-                    width: "fit-content",
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                  }}
-                >
-                  <Text css={{ mr: "$10" }}>View More</Text>
-                  <BsArrowRight color="#EC1C24" />
-                </Container>
-              </Card>
-            </Row>
-          </Col>
-          <Col>
-            <Image
-              src={imgBackground2.src}
-              objectFit="contain"
-              containerCss={{
-                borderRadius: "0",
-              }}
-            />
-          </Col>
-        </Row>
-
-        {/* CARD 3 */}
-        <Row
-          css={{
-            display: "grid",
-            gridAutoRows: "1fr",
-            gridTemplateColumns: "55% 1fr",
-          }}
-        >
-          <Col>
-            <Image
-              src={imgBackground3.src}
-              objectFit="contain"
-              containerCss={{
-                borderRadius: "0",
-              }}
-            />
-          </Col>
-          <Col
-            css={{
-              p: "$10",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <Row align="center">
-              <Image
-                width={109}
-                height={98}
-                src={imgCart?.src}
-                containerCss={{ m: 0 }}
-              />
-            </Row>
-
-            <Row>
-              <Text
-                css={{
-                  mx: "$7",
-                  color: "#363C9A",
-                  fontFamily: "Inter",
-                  fontStyle: "normal",
-                  fontWeight: "700",
-                  fontSize: "16px",
-                  lineHeight: "19px",
-                  letterSpacing: "0.01em",
-                }}
-              >
-                GEOTHERMAL
-              </Text>
-            </Row>
-            <Spacer y={1} />
-
-            <Row>
-              <Text
-                css={{
-                  color: "#BDBDBD",
-                  fontFamily: "Inter",
-                  fontStyle: "normal",
-                  fontWeight: "400",
-                  fontSize: "20px",
-                  lineHeight: "24px",
-                  mx: "$7",
-                }}
-              >
-                Highly trained and experienced Indonesian staff perform all work
-                in duplicate, in accordance with internationally accepted
-                standards: ASTM, British Standard (BS), and International
-                Standards (ISO), that was the Geoservices coal laboratory begin.
-              </Text>
-            </Row>
-
-            <Row align="flex-end" css={{ height: "100%" }}>
-              <Card
-                clickable
-                shadow={false}
-                css={{
-                  width: "fit-content",
-                }}
-              >
-                <Container
-                  css={{
-                    width: "fit-content",
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                  }}
-                >
-                  <Text css={{ mr: "$10" }}>View More</Text>
-                  <BsArrowRight color="#EC1C24" />
-                </Container>
-              </Card>
-            </Row>
-          </Col>
-        </Row>
+      <Container>
+        <Text css={{ fontSize: "16px", color: "#000000" }}>Jakarta Office</Text>
+        <Spacer y={1} />
+        <Text css={{ fontSize: "16px", color: "#828282" }}>
+          Jl. Minangkabau Barat No. 34,
+        </Text>
+        <Text css={{ fontSize: "16px", color: "#828282" }}>
+          {" "}
+          Jakarta, Indonesia
+        </Text>
+        <Text css={{ fontSize: "16px", color: "#828282" }}>
+          Phone : (021) 830 5555, 831 8989
+        </Text>
+        <Text css={{ fontSize: "16px", color: "#828282" }}>
+          Fax : (021) 831 1454
+        </Text>
+        <Text css={{ fontSize: "16px", color: "#828282" }}>
+          Email : jktbranch@geoservices.co.id
+        </Text>
       </Container>
-    </>
+
+      <Container>
+        <Text css={{ fontSize: "16px", color: "#000000" }}>Bandung Office</Text>
+        <Spacer y={1} />
+        <Text css={{ fontSize: "16px", color: "#828282" }}>
+          Jl. Setiabudhi No. 81,
+        </Text>
+        <Text css={{ fontSize: "16px", color: "#828282" }}>
+          {" "}
+          Bandung, Jawa Barat, Indonesia
+        </Text>
+        <Text css={{ fontSize: "16px", color: "#828282" }}>
+          Phone : (022) 203 1316, 203 5436
+        </Text>
+        <Text css={{ fontSize: "16px", color: "#828282" }}>
+          Fax : (022) 203 8090
+        </Text>
+        <Text css={{ fontSize: "16px", color: "#828282" }}>
+          Email : bdgoff@geoservices.co.id
+        </Text>
+      </Container>
+    </Row>
   );
 };
 
-export default Sandbox;
+export default Footer;

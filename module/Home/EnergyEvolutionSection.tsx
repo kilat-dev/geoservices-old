@@ -17,12 +17,13 @@ import { BsArrowRight } from "react-icons/bs";
 const EnergyEvolutionSection = () => {
   return (
     <>
-      <Container xl css={{ p: 0 }}>
+      <Row css={{ width: "100%", position: "relative" }}>
         <Image
           src={imgBackground.src}
           objectFit="fill"
           height="834px"
           containerCss={{
+            width: "100%",
             borderRadius: "0",
             linearGradient: `90.35deg, rgba(0, 0, 0, 0.608) 39.67%,
               rgba(0, 0, 0, 0) 90.6%, rgba(255, 255, 255, 0.435031) 90.6%`,
@@ -112,7 +113,7 @@ const EnergyEvolutionSection = () => {
             </Col>
           </Row>
         </Container>
-      </Container>
+      </Row>
 
       <Container css={{ top: "-150px", position: "relative" }}>
         <Row
