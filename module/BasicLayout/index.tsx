@@ -1,4 +1,4 @@
-import { Container } from "@nextui-org/react";
+import Box from "components/Box";
 import React from "react";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -8,9 +8,7 @@ const BasicLayout = ({ children }: BasicLayoutProps) => {
   return (
     <>
       <Header />
-      <Container xl css={{ m: 0, p: 0 }}>
-        {children}
-      </Container>
+      <Box>{children}</Box>
       <Footer />
     </>
   );

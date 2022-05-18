@@ -26,6 +26,8 @@ const EnergyEvolutionSection = () => {
           containerCss={{
             width: "100%",
             borderRadius: "0",
+            linearGradient: `90.35deg, rgba(0, 0, 0, 0.608),
+              rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.435031)`,
           }}
           css={{ zIndex: "-1", opacity: 0.4 }}
         />
