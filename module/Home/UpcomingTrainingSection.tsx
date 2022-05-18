@@ -14,7 +14,15 @@ import { BsArrowRight } from "react-icons/bs";
 
 const UpcomingTrainingSection = () => {
   return (
-    <Row css={{ width: "100%", position: "relative" }}>
+    <Row
+      css={{
+        width: "100%",
+        position: "relative",
+        background:
+          "linear-gradient(75.36deg," +
+          "rgba(54, 60, 154, 0.9) 68.15%, rgba(54, 60, 154, 0) 100%)",
+      }}
+    >
       <Image
         src={imgBackground.src}
         objectFit="fill"
@@ -22,8 +30,6 @@ const UpcomingTrainingSection = () => {
         containerCss={{
           width: "100%",
           borderRadius: "0",
-          linearGradient: `90.35deg, rgba(0, 0, 0, 0.608) 39.67%,
-              rgba(0, 0, 0, 0) 90.6%, rgba(255, 255, 255, 0.435031) 90.6%`,
         }}
         css={{ zIndex: "-1", opacity: 0.4 }}
       />

@@ -13,11 +13,12 @@ import {
   Card,
 } from "@nextui-org/react";
 import { BsArrowRight } from "react-icons/bs";
+import Box from "components/Box";
 
 const EnergyEvolutionSection = () => {
   return (
     <>
-      <Row css={{ width: "100%", position: "relative" }}>
+      <Box css={{ position: "relative", background: "$black" }}>
         <Image
           src={imgBackground.src}
           objectFit="fill"
@@ -25,8 +26,6 @@ const EnergyEvolutionSection = () => {
           containerCss={{
             width: "100%",
             borderRadius: "0",
-            linearGradient: `90.35deg, rgba(0, 0, 0, 0.608) 39.67%,
-              rgba(0, 0, 0, 0) 90.6%, rgba(255, 255, 255, 0.435031) 90.6%`,
           }}
           css={{ zIndex: "-1", opacity: 0.4 }}
         />
@@ -113,7 +112,7 @@ const EnergyEvolutionSection = () => {
             </Col>
           </Row>
         </Container>
-      </Row>
+      </Box>
 
       <Container css={{ top: "-150px", position: "relative" }}>
         <Row
