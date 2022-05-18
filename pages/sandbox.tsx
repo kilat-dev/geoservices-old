@@ -7,9 +7,7 @@ const Footer = () => {
   return (
     <Row
       css={{
-        mt: "$10",
-        mb: "$40",
-        px: "$40",
+        my: "$10",
         display: "grid",
         gridAutoRows: "1fr",
         gridTemplateColumns: "50% 1fr 1fr",
