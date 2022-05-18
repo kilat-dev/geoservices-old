@@ -1,6 +1,7 @@
+import { BasePage } from "module/BasePage";
 import React from "react";
 import "../styles/globals.css";
-import { MyAppProps } from "./types";
+import { MyAppProps } from "../module/types";
 
 /**
  * Main App render function.
@@ -8,11 +9,14 @@ import { MyAppProps } from "./types";
  */
 function MyApp({ Component, pageProps }: MyAppProps) {
   const Layout = Component.layout || (({ children }) => <>{children}</>);
+  const title = Component.title;
 
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <BasePage title={title}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </BasePage>
   );
 }
 
