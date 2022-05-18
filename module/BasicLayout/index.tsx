@@ -8,7 +8,9 @@ const BasicLayout = ({ children }: BasicLayoutProps) => {
   return (
     <>
       <Header />
-      <Container>{children}</Container>
+      <Container xl css={{ m: 0, p: 0 }}>
+        {children}
+      </Container>
       <Footer />
     </>
   );
