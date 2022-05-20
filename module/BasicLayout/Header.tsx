@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "assets/logo1.png";
-import { Row, Container, Button, Input, Spacer } from "@nextui-org/react";
+import { Row, Container, Button, Input } from "@nextui-org/react";
 import { BiSearch } from "react-icons/bi";
 import { ImCancelCircle } from "react-icons/im";
 import Image from "next/image";

@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: MyAppProps) {
 
   return (
     <BasePage title={title}>
-      <Layout>
+      <Layout {...pageProps}>
         <Component {...pageProps} />
       </Layout>
     </BasePage>
