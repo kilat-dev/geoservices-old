@@ -13,7 +13,7 @@ import {
   Card,
 } from "@nextui-org/react";
 import { BsArrowRight } from "react-icons/bs";
-import Box from "components/Box";
+import Box from "reusables/Box";
 
 const EnergyEvolutionSection = () => {
   return (

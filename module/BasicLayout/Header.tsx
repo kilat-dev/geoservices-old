@@ -4,9 +4,9 @@ import { Row, Container, Button, Input } from "@nextui-org/react";
 import { BiSearch } from "react-icons/bi";
 import { ImCancelCircle } from "react-icons/im";
 import Image from "next/image";
-import TextLink from "components/TextLink";
-import Dot from "components/Dot";
-import Box from "components/Box";
+import TextLink from "reusables/TextLink";
+import Dot from "reusables/Dot";
+import Box from "reusables/Box";
 
 const Header = () => {
   const [isExpand, setExpand] = useState(false);
