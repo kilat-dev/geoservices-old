@@ -23,9 +23,7 @@
     ],
     "rules": {
         "prettier/prettier": "error",
-        "indent": [ "error", 2 ],
         "object-curly-spacing": "off",
-        "quotes": "off",
-        "quote-props": "off"
+        "quotes": "off"
     }
 }

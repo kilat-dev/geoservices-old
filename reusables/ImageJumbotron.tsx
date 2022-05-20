@@ -1,14 +1,20 @@
 import React from "react";
-import imgBackground from "assets/bg-energyevolution.png";
 import Box from "reusables/Box";
 import { Image, Text } from "@nextui-org/react";
 
-const Sandbox = () => {
-  const imageSrc = imgBackground.src;
-  const height = "391px";
-  const objectPosition = "0 -350px";
-  const text = "Core Analysis";
+export interface ImageJumbotronProps {
+  imageSrc: string;
+  height?: string;
+  objectPosition?: string;
+  text: string;
+}
 
+const ImageJumbotron = ({
+  imageSrc,
+  height = "391px",
+  objectPosition = "0 -350px",
+  text = "",
+}: ImageJumbotronProps) => {
   return (
     <Box css={{ width: "100%", position: "relative" }}>
       <Image
@@ -16,7 +22,6 @@ const Sandbox = () => {
         objectFit="cover"
         height={height}
         containerCss={{
-          width: "100%",
           borderRadius: "0",
         }}
         css={{
@@ -44,4 +49,4 @@ const Sandbox = () => {
   );
 };
 
-export default Sandbox;
+export default ImageJumbotron;
