@@ -18,7 +18,7 @@ const OilAndGasLayout = ({
       <Header />
       <Box>
         <ImageJumbotron imageSrc={backgroundImage} text={text} />
-        <Container>
+        <Container css={{ my: "10px" }}>
           <BreadCrumbLine items={breadcrumb} />
           {children}
         </Container>

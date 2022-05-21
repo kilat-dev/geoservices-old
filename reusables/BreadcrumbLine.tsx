@@ -1,3 +1,4 @@
+import { styled } from "@nextui-org/react";
 import React from "react";
 import { FiChevronRight } from "react-icons/fi";
 import Box from "reusables/Box";
@@ -10,42 +11,44 @@ export interface BreadCrumbLineProps {
 
 const BreadCrumbLine = ({ items }: BreadCrumbLineProps) => {
   return (
-    <Box
-      css={{
-        display: "flex",
-        alignItems: "center",
-      }}
-    >
-      {items?.map((item, index) => (
-        <>
-          <Box
-            css={{
-              m: "$2",
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <TextLink href={item.url}>{item.title}</TextLink>
-          </Box>
-
-          {index < items.length - 1 && (
+    <div>
+      <Box
+        css={{
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
+        {items?.map((item, index) => (
+          <>
             <Box
               css={{
                 m: "$2",
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center",
-                position: "relative",
-                top: "$1",
               }}
             >
-              <FiChevronRight />
+              <TextLink href={item.url}>{item.title}</TextLink>
             </Box>
-          )}
-        </>
-      ))}
-    </Box>
+
+            {index < items.length - 1 && (
+              <Box
+                css={{
+                  m: "$2",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  position: "relative",
+                  top: "$1",
+                }}
+              >
+                <FiChevronRight />
+              </Box>
+            )}
+          </>
+        ))}
+      </Box>
+    </div>
   );
 };
 
-export default BreadCrumbLine;
+export default styled(BreadCrumbLine, {});
