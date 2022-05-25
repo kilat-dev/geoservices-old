@@ -1,19 +1,20 @@
-import BasicLayout from "module/BasicLayout";
 import RockDescription from "module/RockDescription";
 import { PageType } from "module/types";
 import { ROCK_DESCRIPTION as PAGE } from "pageConstant/oil_and_gas";
-import imgBackground from "assets/bg-energyevolution.png";
 import { getBreadcrumb } from "pageConstant";
+import OilAndGasLayout from "module/BasicLayout/OilAndGasLayout";
 
 const RockDescriptionPage: PageType = RockDescription;
-RockDescriptionPage.layout = BasicLayout;
+RockDescriptionPage.layout = OilAndGasLayout;
 RockDescriptionPage.title = PAGE.title;
 
 export const getStaticProps = async () => {
+  const imgBackground = "/assets/bg-rock.png";
+
   return {
     props: {
-      text: "CORE ANALYSIS",
-      backgroundImage: imgBackground?.src,
+      text: "ROCK DESCRIPTION",
+      backgroundImage: imgBackground,
       breadcrumb: getBreadcrumb(PAGE.title),
     },
   };
