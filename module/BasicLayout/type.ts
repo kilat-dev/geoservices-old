@@ -7,6 +7,7 @@ export interface BasicLayoutProps {
 export interface OilAndGasLayoutProps {
   children: JSX.Element;
   backgroundImage: string;
+  jumbotronShift?: string;
   text: string;
   breadcrumb: BreadcrumbProps;
 }

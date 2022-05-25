@@ -1,8 +1,4 @@
 import React from "react";
-import imgBackground1 from "assets/bg-coal1.png";
-import imgBackground2 from "assets/bg-coal2.png";
-import imgBackground3 from "assets/bg-coal3.png";
-import imgCart from "assets/cart2-vector.png";
 import {
   Text,
   Container,
@@ -15,6 +11,11 @@ import {
 import { BsArrowRight } from "react-icons/bs";
 
 const OurSpecialtySection = () => {
+  const imgBackground1 = "/assets/bg-coal1.png";
+  const imgBackground2 = "/assets/bg-coal2.png";
+  const imgBackground3 = "/assets/bg-coal3.png";
+  const imgCart = "/assets/cart2-vector.png";
+
   return (
     <Container xl css={{ p: 0, overflow: "hidden" }}>
       {/* CARD TITLE */}
@@ -46,7 +47,7 @@ const OurSpecialtySection = () => {
       >
         <Col>
           <Image
-            src={imgBackground1.src}
+            src={imgBackground1}
             objectFit="contain"
             containerCss={{
               borderRadius: "0",
@@ -65,7 +66,7 @@ const OurSpecialtySection = () => {
             <Image
               width={109}
               height={98}
-              src={imgCart?.src}
+              src={imgCart}
               containerCss={{ m: 0 }}
             />
           </Row>
@@ -151,7 +152,7 @@ const OurSpecialtySection = () => {
             <Image
               width={109}
               height={98}
-              src={imgCart?.src}
+              src={imgCart}
               containerCss={{ m: 0 }}
             />
           </Row>
@@ -217,7 +218,7 @@ const OurSpecialtySection = () => {
         </Col>
         <Col>
           <Image
-            src={imgBackground2.src}
+            src={imgBackground2}
             objectFit="contain"
             containerCss={{
               borderRadius: "0",
@@ -236,7 +237,7 @@ const OurSpecialtySection = () => {
       >
         <Col>
           <Image
-            src={imgBackground3.src}
+            src={imgBackground3}
             objectFit="contain"
             containerCss={{
               borderRadius: "0",
@@ -255,7 +256,7 @@ const OurSpecialtySection = () => {
             <Image
               width={109}
               height={98}
-              src={imgCart?.src}
+              src={imgCart}
               containerCss={{ m: 0 }}
             />
           </Row>

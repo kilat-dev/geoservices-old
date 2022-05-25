@@ -1,9 +1,10 @@
 import React from "react";
-import logo from "assets/logo1.png";
 import { Container, Row, Spacer, Text } from "@nextui-org/react";
 import Image from "next/image";
 
 const Footer = () => {
+  const logo = "/assets/logo1.png";
+
   return (
     <Row
       css={{
@@ -24,7 +25,7 @@ const Footer = () => {
         }}
       >
         <Image
-          src={logo?.src}
+          src={logo}
           width="266px"
           height="63px"
           alt="logo"

@@ -1,8 +1,4 @@
 import React from "react";
-import imgBackground from "assets/bg-energyevolution.png";
-import imgCart from "assets/cart-vector.png";
-import imgResearch from "assets/research-vector.png";
-import imgSearch from "assets/search-vector.png";
 import {
   Text,
   Container,
@@ -16,11 +12,16 @@ import { BsArrowRight } from "react-icons/bs";
 import Box from "reusables/Box";
 
 const EnergyEvolutionSection = () => {
+  const imgBackground = "/assets/bg-energyevolution.png";
+  const imgCart = "/assets/cart-vector.png";
+  const imgResearch = "/assets/research-vector.png";
+  const imgSearch = "/assets/search-vector.png";
+
   return (
     <>
       <Box css={{ position: "relative", background: "$black" }}>
         <Image
-          src={imgBackground.src}
+          src={imgBackground}
           objectFit="fill"
           height="834px"
           containerCss={{
@@ -137,7 +138,7 @@ const EnergyEvolutionSection = () => {
                     <Image
                       width={109}
                       height={98}
-                      src={imgSearch?.src}
+                      src={imgSearch}
                       containerCss={{ m: 0 }}
                     />
                   </Col>
@@ -204,7 +205,7 @@ const EnergyEvolutionSection = () => {
                     <Image
                       width={109}
                       height={98}
-                      src={imgCart?.src}
+                      src={imgCart}
                       containerCss={{ m: 0 }}
                     />
                   </Col>
@@ -270,7 +271,7 @@ const EnergyEvolutionSection = () => {
                     <Image
                       width={109}
                       height={98}
-                      src={imgResearch?.src}
+                      src={imgResearch}
                       containerCss={{ m: 0 }}
                     />
                   </Col>

@@ -12,7 +12,7 @@ export interface ImageJumbotronProps {
 const ImageJumbotron = ({
   imageSrc,
   height = "391px",
-  objectPosition = "0 -350px",
+  objectPosition = "0",
   text = "",
 }: ImageJumbotronProps) => {
   return (
@@ -23,6 +23,7 @@ const ImageJumbotron = ({
         height={height}
         containerCss={{
           borderRadius: "0",
+          background: "rgba(0, 0, 0, 0.3)",
         }}
         css={{
           zIndex: "-1",
@@ -39,8 +40,10 @@ const ImageJumbotron = ({
           fontFamily: "Plus Jakarta Sans",
           fontStyle: "normal",
           fontWeight: "800",
-          fontSize: "80px",
+          fontSize: "60px",
           lineHeight: "76px",
+          width: "80%",
+          textTransform: "uppercase",
         }}
       >
         {text}

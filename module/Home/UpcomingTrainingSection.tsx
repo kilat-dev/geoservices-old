@@ -9,10 +9,11 @@ import {
   Card,
   Image,
 } from "@nextui-org/react";
-import imgBackground from "assets/bg-training.png";
 import { BsArrowRight } from "react-icons/bs";
 
 const UpcomingTrainingSection = () => {
+  const imgBackground = "/assets/bg-training.png";
+
   return (
     <Row
       css={{
@@ -24,7 +25,7 @@ const UpcomingTrainingSection = () => {
       }}
     >
       <Image
-        src={imgBackground.src}
+        src={imgBackground}
         objectFit="fill"
         height="458px"
         containerCss={{

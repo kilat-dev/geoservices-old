@@ -1,19 +1,20 @@
 import GFS from "module/GeochemistryFluidsEnviromental";
-import BasicLayout from "module/BasicLayout";
 import { PageType } from "module/types";
 import { GFE as PAGE } from "pageConstant/oil_and_gas";
-import imgBackground from "assets/bg-energyevolution.png";
 import { getBreadcrumb } from "pageConstant";
+import OilAndGasLayout from "module/BasicLayout/OilAndGasLayout";
 
 const GFSPage: PageType = GFS;
-GFSPage.layout = BasicLayout;
+GFSPage.layout = OilAndGasLayout;
 GFSPage.title = PAGE.title;
 
 export const getStaticProps = async () => {
+  const imgBackground = "/assets/bg-mine1.png";
+
   return {
     props: {
-      text: "CORE ANALYSIS",
-      backgroundImage: imgBackground?.src,
+      text: "Geochemistry, Fluids & Environmetal",
+      backgroundImage: imgBackground,
       breadcrumb: getBreadcrumb(PAGE.title),
     },
   };

@@ -9,9 +9,9 @@ export interface BreadCrumbLineProps {
   items: BreadcrumbProps;
 }
 
-const BreadCrumbLine = ({ items }: BreadCrumbLineProps) => {
+const BreadCrumbLine = ({ items, ...rest }: BreadCrumbLineProps) => {
   return (
-    <div>
+    <Box {...rest}>
       <Box
         css={{
           display: "flex",
@@ -19,7 +19,7 @@ const BreadCrumbLine = ({ items }: BreadCrumbLineProps) => {
         }}
       >
         {items?.map((item, index) => (
-          <>
+          <React.Fragment key={item.url}>
             <Box
               css={{
                 m: "$2",
@@ -44,10 +44,10 @@ const BreadCrumbLine = ({ items }: BreadCrumbLineProps) => {
                 <FiChevronRight />
               </Box>
             )}
-          </>
+          </React.Fragment>
         ))}
       </Box>
-    </div>
+    </Box>
   );
 };
 

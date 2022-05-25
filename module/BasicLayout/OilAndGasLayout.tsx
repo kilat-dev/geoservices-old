@@ -12,12 +12,17 @@ const OilAndGasLayout = ({
   backgroundImage,
   text,
   breadcrumb,
+  jumbotronShift,
 }: OilAndGasLayoutProps) => {
   return (
     <>
       <Header />
       <Box>
-        <ImageJumbotron imageSrc={backgroundImage} text={text} />
+        <ImageJumbotron
+          imageSrc={backgroundImage}
+          text={text}
+          objectPosition={jumbotronShift}
+        />
         <Container css={{ my: "10px" }}>
           <BreadCrumbLine items={breadcrumb} />
           {children}

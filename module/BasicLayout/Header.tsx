@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import logo from "assets/logo1.png";
 import { Row, Container, Button, Input } from "@nextui-org/react";
 import { BiSearch } from "react-icons/bi";
 import { ImCancelCircle } from "react-icons/im";
@@ -11,6 +10,7 @@ import Box from "reusables/Box";
 const Header = () => {
   const [isExpand, setExpand] = useState(false);
   const [searchKey, setSearchKey] = useState("");
+  const logo = "/assets/logo1.png";
 
   return (
     <Box css={{ minHeight: "80px" }}>
@@ -74,7 +74,7 @@ const Header = () => {
 
           <Box css={{ height: "100%", display: "flex", alignItems: "center" }}>
             <Image
-              src={logo?.src}
+              src={logo}
               width="266px"
               height="63px"
               alt="logo"
