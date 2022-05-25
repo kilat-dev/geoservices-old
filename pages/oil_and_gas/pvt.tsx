@@ -9,10 +9,12 @@ PVTPage.layout = OilAndGasLayout;
 PVTPage.title = PAGE.title;
 
 export const getStaticProps = async () => {
+  const imgBackground = "/assets/bg-personlab3.png";
+
   return {
     props: {
-      text: "CORE ANALYSIS",
-      backgroundImage: "/assets/bg-mine1.png",
+      text: "PVT ANALYSIS",
+      backgroundImage: imgBackground,
       breadcrumb: getBreadcrumb(PAGE.title),
     },
     revalidate: 10,
