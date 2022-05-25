@@ -1,12 +1,10 @@
 import React from "react";
 import Box from "reusables/Box";
-import { Image, Text } from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
 
 const Sandbox = () => {
   const image1 = "/assets/bg-personlab1.png";
   const image2 = "/assets/bg-personlab2.png";
-  const vector1 = "/assets/research-vector.png";
-  const vector2 = "/assets/vector-pump.png";
 
   return (
     <Box
