@@ -25,7 +25,6 @@ const OurSpecialtySection = () => {
         />
         <Text
           css={{
-            fontFamily: "Inter",
             fontStyle: "normal",
             fontWeight: "300",
             fontSize: "50px",
@@ -76,7 +75,7 @@ const OurSpecialtySection = () => {
               css={{
                 mx: "$7",
                 color: "#363C9A",
-                fontFamily: "Inter",
+
                 fontStyle: "normal",
                 fontWeight: "700",
                 fontSize: "16px",
@@ -92,8 +91,8 @@ const OurSpecialtySection = () => {
           <Row>
             <Text
               css={{
-                color: "#BDBDBD",
-                fontFamily: "Inter",
+                color: "#828282",
+
                 fontStyle: "normal",
                 fontWeight: "400",
                 fontSize: "20px",
@@ -124,7 +123,17 @@ const OurSpecialtySection = () => {
                   alignItems: "center",
                 }}
               >
-                <Text css={{ mr: "$10" }}>View More</Text>
+                <Text
+                  css={{
+                    mr: "$10",
+                    fontStyle: "normal",
+                    fontWeight: "700",
+                    fontSize: "16px",
+                    lineHeight: "20px",
+                  }}
+                >
+                  View More
+                </Text>
                 <BsArrowRight color="#EC1C24" />
               </Container>
             </Card>
@@ -162,7 +171,7 @@ const OurSpecialtySection = () => {
               css={{
                 mx: "$7",
                 color: "#363C9A",
-                fontFamily: "Inter",
+
                 fontStyle: "normal",
                 fontWeight: "700",
                 fontSize: "16px",
@@ -178,8 +187,8 @@ const OurSpecialtySection = () => {
           <Row>
             <Text
               css={{
-                color: "#BDBDBD",
-                fontFamily: "Inter",
+                color: "#828282",
+
                 fontStyle: "normal",
                 fontWeight: "400",
                 fontSize: "20px",
@@ -210,7 +219,17 @@ const OurSpecialtySection = () => {
                   alignItems: "center",
                 }}
               >
-                <Text css={{ mr: "$10" }}>View More</Text>
+                <Text
+                  css={{
+                    mr: "$10",
+                    fontStyle: "normal",
+                    fontWeight: "700",
+                    fontSize: "16px",
+                    lineHeight: "20px",
+                  }}
+                >
+                  View More
+                </Text>
                 <BsArrowRight color="#EC1C24" />
               </Container>
             </Card>
@@ -266,7 +285,7 @@ const OurSpecialtySection = () => {
               css={{
                 mx: "$7",
                 color: "#363C9A",
-                fontFamily: "Inter",
+
                 fontStyle: "normal",
                 fontWeight: "700",
                 fontSize: "16px",
@@ -282,8 +301,8 @@ const OurSpecialtySection = () => {
           <Row>
             <Text
               css={{
-                color: "#BDBDBD",
-                fontFamily: "Inter",
+                color: "#828282",
+
                 fontStyle: "normal",
                 fontWeight: "400",
                 fontSize: "20px",
@@ -314,7 +333,17 @@ const OurSpecialtySection = () => {
                   alignItems: "center",
                 }}
               >
-                <Text css={{ mr: "$10" }}>View More</Text>
+                <Text
+                  css={{
+                    mr: "$10",
+                    fontStyle: "normal",
+                    fontWeight: "700",
+                    fontSize: "16px",
+                    lineHeight: "20px",
+                  }}
+                >
+                  View More
+                </Text>
                 <BsArrowRight color="#EC1C24" />
               </Container>
             </Card>

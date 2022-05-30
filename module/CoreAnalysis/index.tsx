@@ -3,7 +3,6 @@ import React from "react";
 import Box from "reusables/Box";
 
 const CardText = styled(Text, {
-  fontFamily: "Inter",
   fontStyle: "normal",
   fontWeight: "400",
   fontSize: "32px",

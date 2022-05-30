@@ -1,7 +1,8 @@
 import React from "react";
 
-import { Text, Container, Row, Col, Spacer, Card } from "@nextui-org/react";
+import { Text, Container, Row, Spacer, Card } from "@nextui-org/react";
 import { BsArrowRight } from "react-icons/bs";
+import Box from "reusables/Box";
 
 const LatestUpdateSection = () => {
   return (
@@ -14,7 +15,6 @@ const LatestUpdateSection = () => {
           />
           <Text
             css={{
-              fontFamily: "Inter",
               fontStyle: "normal",
               fontWeight: "300",
               fontSize: "50px",
@@ -25,15 +25,21 @@ const LatestUpdateSection = () => {
             Latest Update
           </Text>
         </Row>
-        <Row gap={2}>
+        <Box
+          css={{
+            display: "grid",
+            gridAutoColumns: "1fr",
+            gridTemplateColumns: "1fr 1fr 1fr",
+          }}
+        >
           {/* CARD 1 */}
-          <Col>
-            <Card>
+          <Box css={{ mx: "$10" }}>
+            <Card css={{ height: "100%" }}>
               <Row css={{ pt: "$10" }}>
                 <Text
                   css={{
                     color: "#363C9A",
-                    fontFamily: "Inter",
+
                     fontStyle: "normal",
                     fontWeight: "700",
                     fontSize: "14px",
@@ -49,7 +55,7 @@ const LatestUpdateSection = () => {
                 <Text
                   css={{
                     color: "#000000",
-                    fontFamily: "Inter",
+
                     fontStyle: "normal",
                     fontWeight: "400",
                     fontSize: "32px",
@@ -78,22 +84,32 @@ const LatestUpdateSection = () => {
                       alignItems: "center",
                     }}
                   >
-                    <Text css={{ mr: "$10", fontSize: "16px" }}>Watch</Text>
+                    <Text
+                      css={{
+                        mr: "$10",
+                        fontStyle: "normal",
+                        fontWeight: "700",
+                        fontSize: "16px",
+                        lineHeight: "20px",
+                      }}
+                    >
+                      Watch
+                    </Text>
                     <BsArrowRight color="#EC1C24" />
                   </Container>
                 </Card>
               </Row>
             </Card>
-          </Col>
+          </Box>
 
           {/* CARD 2 */}
-          <Col>
-            <Card>
+          <Box css={{ mx: "$10" }}>
+            <Card css={{ height: "100%" }}>
               <Row css={{ pt: "$10" }}>
                 <Text
                   css={{
                     color: "#363C9A",
-                    fontFamily: "Inter",
+
                     fontStyle: "normal",
                     fontWeight: "700",
                     fontSize: "14px",
@@ -109,7 +125,7 @@ const LatestUpdateSection = () => {
                 <Text
                   css={{
                     color: "#000000",
-                    fontFamily: "Inter",
+
                     fontStyle: "normal",
                     fontWeight: "400",
                     fontSize: "32px",
@@ -139,22 +155,32 @@ const LatestUpdateSection = () => {
                       alignItems: "center",
                     }}
                   >
-                    <Text css={{ mr: "$10", fontSize: "16px" }}>Read</Text>
+                    <Text
+                      css={{
+                        mr: "$10",
+                        fontStyle: "normal",
+                        fontWeight: "700",
+                        fontSize: "16px",
+                        lineHeight: "20px",
+                      }}
+                    >
+                      Read
+                    </Text>
                     <BsArrowRight color="#EC1C24" />
                   </Container>
                 </Card>
               </Row>
             </Card>
-          </Col>
+          </Box>
 
           {/* CARD 3 */}
-          <Col>
-            <Card>
+          <Box css={{ mx: "$10" }}>
+            <Card css={{ height: "100%" }}>
               <Row css={{ pt: "$10" }}>
                 <Text
                   css={{
                     color: "#363C9A",
-                    fontFamily: "Inter",
+
                     fontStyle: "normal",
                     fontWeight: "700",
                     fontSize: "14px",
@@ -170,7 +196,7 @@ const LatestUpdateSection = () => {
                 <Text
                   css={{
                     color: "#000000",
-                    fontFamily: "Inter",
+
                     fontStyle: "normal",
                     fontWeight: "400",
                     fontSize: "32px",
@@ -199,14 +225,24 @@ const LatestUpdateSection = () => {
                       alignItems: "center",
                     }}
                   >
-                    <Text css={{ mr: "$10", fontSize: "16px" }}>Watch</Text>
+                    <Text
+                      css={{
+                        mr: "$10",
+                        fontStyle: "normal",
+                        fontWeight: "700",
+                        fontSize: "16px",
+                        lineHeight: "20px",
+                      }}
+                    >
+                      Watch
+                    </Text>
                     <BsArrowRight color="#EC1C24" />
                   </Container>
                 </Card>
               </Row>
             </Card>
-          </Col>
-        </Row>
+          </Box>
+        </Box>
       </Container>
     </>
   );

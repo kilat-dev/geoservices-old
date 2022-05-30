@@ -106,7 +106,17 @@ const EnergyEvolutionSection = () => {
                     alignItems: "center",
                   }}
                 >
-                  <Text css={{ mr: "$10" }}>View More</Text>
+                  <Text
+                    css={{
+                      mr: "$10",
+                      fontStyle: "normal",
+                      fontWeight: "700",
+                      fontSize: "16px",
+                      lineHeight: "20px",
+                    }}
+                  >
+                    View More
+                  </Text>
                   <BsArrowRight color="#EC1C24" />
                 </Container>
               </Card>
@@ -146,7 +156,7 @@ const EnergyEvolutionSection = () => {
                     <Text
                       css={{
                         color: "#363C9A",
-                        fontFamily: "Inter",
+
                         fontStyle: "normal",
                         fontWeight: "700",
                         fontSize: "16px",
@@ -161,8 +171,8 @@ const EnergyEvolutionSection = () => {
                 <Row>
                   <Text
                     css={{
-                      color: "#BDBDBD",
-                      fontFamily: "Inter",
+                      color: "#828282",
+
                       fontStyle: "normal",
                       fontWeight: "400",
                       fontSize: "20px",
@@ -213,7 +223,7 @@ const EnergyEvolutionSection = () => {
                     <Text
                       css={{
                         color: "#363C9A",
-                        fontFamily: "Inter",
+
                         fontStyle: "normal",
                         fontWeight: "700",
                         fontSize: "16px",
@@ -228,8 +238,8 @@ const EnergyEvolutionSection = () => {
                 <Row>
                   <Text
                     css={{
-                      color: "#BDBDBD",
-                      fontFamily: "Inter",
+                      color: "#828282",
+
                       fontStyle: "normal",
                       fontWeight: "400",
                       fontSize: "20px",
@@ -279,7 +289,7 @@ const EnergyEvolutionSection = () => {
                     <Text
                       css={{
                         color: "#363C9A",
-                        fontFamily: "Inter",
+
                         fontStyle: "normal",
                         fontWeight: "700",
                         fontSize: "16px",
@@ -294,8 +304,8 @@ const EnergyEvolutionSection = () => {
                 <Row>
                   <Text
                     css={{
-                      color: "#BDBDBD",
-                      fontFamily: "Inter",
+                      color: "#828282",
+
                       fontStyle: "normal",
                       fontWeight: "400",
                       fontSize: "20px",

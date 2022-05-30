@@ -43,7 +43,6 @@ const UpcomingTrainingSection = () => {
             />
             <Text
               css={{
-                fontFamily: "Inter",
                 fontStyle: "normal",
                 fontWeight: "300",
                 fontSize: "50px",
@@ -93,7 +92,7 @@ const UpcomingTrainingSection = () => {
                 <Text
                   css={{
                     color: "#F2F2F2",
-                    fontFamily: "Inter",
+
                     fontStyle: "normal",
                     fontWeight: "700",
                     fontSize: "24px",
@@ -109,7 +108,7 @@ const UpcomingTrainingSection = () => {
                 <Text
                   css={{
                     color: "#F2F2F2",
-                    fontFamily: "Inter",
+
                     fontStyle: "normal",
                     fontWeight: "400",
                     fontSize: "16px",
@@ -142,7 +141,10 @@ const UpcomingTrainingSection = () => {
                     <Text
                       css={{
                         mr: "$10",
+                        fontStyle: "normal",
+                        fontWeight: "700",
                         fontSize: "16px",
+                        lineHeight: "20px",
                         color: "#F2F2F2",
                       }}
                     >
@@ -162,7 +164,7 @@ const UpcomingTrainingSection = () => {
                 <Text
                   css={{
                     color: "#F2F2F2",
-                    fontFamily: "Inter",
+
                     fontStyle: "normal",
                     fontWeight: "700",
                     fontSize: "24px",
@@ -178,7 +180,7 @@ const UpcomingTrainingSection = () => {
                 <Text
                   css={{
                     color: "#F2F2F2",
-                    fontFamily: "Inter",
+
                     fontStyle: "normal",
                     fontWeight: "400",
                     fontSize: "16px",
@@ -211,7 +213,10 @@ const UpcomingTrainingSection = () => {
                     <Text
                       css={{
                         mr: "$10",
+                        fontStyle: "normal",
+                        fontWeight: "700",
                         fontSize: "16px",
+                        lineHeight: "20px",
                         color: "#F2F2F2",
                       }}
                     >
@@ -231,7 +236,7 @@ const UpcomingTrainingSection = () => {
                 <Text
                   css={{
                     color: "#F2F2F2",
-                    fontFamily: "Inter",
+
                     fontStyle: "normal",
                     fontWeight: "700",
                     fontSize: "24px",
@@ -247,7 +252,7 @@ const UpcomingTrainingSection = () => {
                 <Text
                   css={{
                     color: "#F2F2F2",
-                    fontFamily: "Inter",
+
                     fontStyle: "normal",
                     fontWeight: "400",
                     fontSize: "16px",
@@ -280,7 +285,10 @@ const UpcomingTrainingSection = () => {
                     <Text
                       css={{
                         mr: "$10",
+                        fontStyle: "normal",
+                        fontWeight: "700",
                         fontSize: "16px",
+                        lineHeight: "20px",
                         color: "#F2F2F2",
                       }}
                     >
