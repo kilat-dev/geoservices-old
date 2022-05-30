@@ -34,12 +34,17 @@ const LatestUpdateSection = () => {
         >
           {/* CARD 1 */}
           <Box css={{ mx: "$10" }}>
-            <Card css={{ height: "100%" }}>
+            <Card
+              css={{
+                height: "100%",
+                backgroundColor: "#F8F8F8",
+                boxShadow: "10px 10px #E0E0E0",
+              }}
+            >
               <Row css={{ pt: "$10" }}>
                 <Text
                   css={{
                     color: "#363C9A",
-
                     fontStyle: "normal",
                     fontWeight: "700",
                     fontSize: "14px",
@@ -55,7 +60,6 @@ const LatestUpdateSection = () => {
                 <Text
                   css={{
                     color: "#000000",
-
                     fontStyle: "normal",
                     fontWeight: "400",
                     fontSize: "32px",
@@ -104,12 +108,17 @@ const LatestUpdateSection = () => {
 
           {/* CARD 2 */}
           <Box css={{ mx: "$10" }}>
-            <Card css={{ height: "100%" }}>
+            <Card
+              css={{
+                height: "100%",
+                backgroundColor: "#F8F8F8",
+                boxShadow: "10px 10px #E0E0E0",
+              }}
+            >
               <Row css={{ pt: "$10" }}>
                 <Text
                   css={{
                     color: "#363C9A",
-
                     fontStyle: "normal",
                     fontWeight: "700",
                     fontSize: "14px",
@@ -175,12 +184,17 @@ const LatestUpdateSection = () => {
 
           {/* CARD 3 */}
           <Box css={{ mx: "$10" }}>
-            <Card css={{ height: "100%" }}>
+            <Card
+              css={{
+                height: "100%",
+                backgroundColor: "#F8F8F8",
+                boxShadow: "10px 10px #E0E0E0",
+              }}
+            >
               <Row css={{ pt: "$10" }}>
                 <Text
                   css={{
                     color: "#363C9A",
-
                     fontStyle: "normal",
                     fontWeight: "700",
                     fontSize: "14px",
