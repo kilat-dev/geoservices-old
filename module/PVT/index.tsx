@@ -9,7 +9,7 @@ const PVT = () => {
   const vector2 = "/assets/vector-pump.png";
 
   return (
-    <>
+    <Box css={{ mb: "$40" }}>
       <Box
         css={{
           display: "grid",
@@ -66,11 +66,11 @@ const PVT = () => {
           </Text>
           <Text
             css={{
-              fontWeight: "700",
+              fontWeight: "400",
               fontSize: "20px",
               lineHeight: "24px",
               color: "#828282",
-              my: "$10",
+              my: "$15",
             }}
           >
             Sample Validity <br />
@@ -117,11 +117,11 @@ const PVT = () => {
           </Text>
           <Text
             css={{
-              fontWeight: "700",
+              fontWeight: "400",
               fontSize: "20px",
               lineHeight: "24px",
               color: "#828282",
-              my: "$10",
+              my: "$15",
             }}
           >
             Swelling test <br />
@@ -148,7 +148,7 @@ const PVT = () => {
           display: "grid",
           gridAutoRows: "1fr",
           gridTemplateColumns: "25% 1fr",
-          my: "$20",
+          my: "$10",
           borderTop: "4px solid #D3252C",
           boxShadow: "0px 4px 4px 0px #0000001A",
           p: "44px 193px 44px 52px",
@@ -169,7 +169,7 @@ const PVT = () => {
         <Box css={{}}>
           <Text
             css={{
-              fontWeight: "700",
+              fontWeight: "400",
               fontSize: "20px",
               lineHeight: "24px",
               color: "#828282",
@@ -194,7 +194,7 @@ const PVT = () => {
           display: "grid",
           gridAutoRows: "1fr",
           gridTemplateColumns: "25% 1fr",
-          my: "$20",
+          my: "$10",
           borderTop: "4px solid #D3252C",
           boxShadow: "0px 4px 4px 0px #0000001A",
           p: "44px 193px 44px 52px",
@@ -215,7 +215,7 @@ const PVT = () => {
         <Box css={{}}>
           <Text
             css={{
-              fontWeight: "700",
+              fontWeight: "400",
               fontSize: "20px",
               lineHeight: "24px",
               color: "#828282",
@@ -227,7 +227,7 @@ const PVT = () => {
           </Text>
         </Box>
       </Box>
-    </>
+    </Box>
   );
 };
 

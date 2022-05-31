@@ -58,11 +58,11 @@ const StratigraphicServices = () => {
         </Text>
         <Text
           css={{
-            fontWeight: "700",
+            fontWeight: "400",
             fontSize: "20px",
             lineHeight: "24px",
             color: "#828282",
-            my: "$10",
+            my: "$15",
           }}
         >
           Biostratigraphy (Exploration & Production Phase) <br />

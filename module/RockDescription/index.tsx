@@ -59,11 +59,11 @@ const RockDescription = () => {
           </Text>
           <Text
             css={{
-              fontWeight: "700",
+              fontWeight: "400",
               fontSize: "20px",
               lineHeight: "24px",
               color: "#828282",
-              my: "$10",
+              my: "$15",
             }}
           >
             Sedimentology <br />
@@ -104,7 +104,7 @@ const RockDescription = () => {
         <Box css={{}}>
           <Text
             css={{
-              fontWeight: "700",
+              fontWeight: "400",
               fontSize: "20px",
               lineHeight: "24px",
               color: "#828282",

@@ -59,7 +59,7 @@ const GeochemistryFluidsEnviromental = () => {
         </Text>
         <Text
           css={{
-            fontWeight: "700",
+            fontWeight: "400",
             fontSize: "20px",
             lineHeight: "24px",
             color: "#828282",
@@ -109,7 +109,7 @@ const GeochemistryFluidsEnviromental = () => {
         </Text>
         <Text
           css={{
-            fontWeight: "700",
+            fontWeight: "400",
             fontSize: "20px",
             lineHeight: "24px",
             color: "#828282",
