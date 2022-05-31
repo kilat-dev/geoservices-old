@@ -2,7 +2,14 @@ import { Link, Text } from "@nextui-org/react";
 import NextLink from "next/link";
 import React from "react";
 
-const TextLink = ({ href, fontSize, children, ...rest }: any) => {
+export interface TextLinkProps {
+  href: string;
+  fontSize: string;
+  children: JSX.Element;
+  [x: string]: any;
+}
+
+const TextLink = ({ href, fontSize, children, ...rest }: TextLinkProps) => {
   return (
     <Text>
       <NextLink href={href} passHref>
