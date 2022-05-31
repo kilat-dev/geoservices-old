@@ -14,6 +14,7 @@ const thisBreadcrumb = [
   {
     title: "Home",
     url: "/",
+    textColor: "#363C9A",
   },
 ];
 

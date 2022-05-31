@@ -13,126 +13,127 @@ const Header = () => {
   const logo = "/assets/logo1.png";
 
   return (
-    <Box
-      css={{
-        minHeight: "80px",
-        m: 0,
-        p: 0,
-        top: 0,
-        position: "fixed",
-        zIndex: 2,
-        background: "rgba(255, 255, 255, 0.8)",
-        display: "grid",
-        gridAutoRows: "1fr",
-        width: "100%",
-      }}
-    >
+    <Box css={{ minHeight: "63px" }}>
       <Box
         css={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItem: "center",
-          position: "relative",
-          height: "100%",
+          m: 0,
+          p: 0,
+          top: 0,
+          position: "fixed",
+          zIndex: 2,
+          background: "rgba(255, 255, 255, 0.8)",
+          display: "grid",
+          gridAutoRows: "1fr",
+          width: "100%",
         }}
       >
         <Box
           css={{
-            width: `${isExpand ? "100%" : "0px"}`,
-            height: "100%",
-            transition: "width 0.5s",
-            position: "absolute",
-            zIndex: 5,
-            left: `${isExpand ? "0" : "-100px"}`,
-            background: "rgba(255, 255, 255)",
             display: "flex",
-            alignContent: "center",
-            p: "$5",
-          }}
-        >
-          <Input
-            width="100%"
-            placeholder="search"
-            value={searchKey}
-            onChange={(e) => setSearchKey(e?.target?.value)}
-            contentRight={
-              <Button
-                auto
-                light
-                onPress={() => {
-                  setExpand(false);
-                  setSearchKey("");
-                }}
-                css={{ right: "$10" }}
-              >
-                <ImCancelCircle />
-              </Button>
-            }
-          />
-        </Box>
-
-        <Box
-          css={{
+            justifyContent: "space-between",
+            alignItem: "center",
+            position: "relative",
             height: "100%",
-            display: "flex",
-            alignItems: "center",
-            pl: "100px",
           }}
         >
-          <Image
-            src={logo}
-            width="266px"
-            height="63px"
-            alt="logo"
-            objectFit="initial"
-          />
-        </Box>
-
-        <Box
-          css={{
-            display: "grid",
-            alignItems: "center",
-            gridAutoRows: "1fr",
-            gridTemplateColumns: "auto 1fr",
-          }}
-        >
-          <Box css={{ mr: "$5" }}>
-            <Row justify="flex-end" align="center" gap={1}>
-              <TextLink fontSize="tiny" href="">
-                Career
-              </TextLink>
-              <Dot />
-              <TextLink fontSize="tiny" href="">
-                About Us
-              </TextLink>
-              <Dot />
-              <TextLink fontSize="tiny" href="">
-                Contact
-              </TextLink>
-            </Row>
-            <Row justify="flex-end" align="center" gap={1}>
-              <TextLink href="">Oil and Gas</TextLink>
-              <TextLink href="">Coal and Minerals</TextLink>
-              <TextLink href="">Geothermal</TextLink>
-              <TextLink href="">Trade and Services</TextLink>
-            </Row>
-          </Box>
-
-          <Button
-            auto
-            onPress={() => {
-              setExpand(true);
-            }}
+          <Box
             css={{
-              backgroundColor: "#363C9A",
-              zIndex: 0,
-              borderRadius: "0",
+              width: `${isExpand ? "100%" : "0px"}`,
               height: "100%",
-              width: "90px",
+              transition: "width 0.5s",
+              position: "absolute",
+              zIndex: 5,
+              left: `${isExpand ? "0" : "-100px"}`,
+              background: "rgba(255, 255, 255)",
+              display: "flex",
+              alignContent: "center",
+              p: "$5",
             }}
           >
-            <IoSearchOutline size={30} />
-          </Button>
+            <Input
+              width="100%"
+              placeholder="search"
+              value={searchKey}
+              onChange={(e) => setSearchKey(e?.target?.value)}
+              contentRight={
+                <Button
+                  auto
+                  light
+                  onPress={() => {
+                    setExpand(false);
+                    setSearchKey("");
+                  }}
+                  css={{ right: "$10" }}
+                >
+                  <ImCancelCircle />
+                </Button>
+              }
+            />
+          </Box>
+
+          <Box
+            css={{
+              height: "100%",
+              display: "flex",
+              alignItems: "center",
+              pl: "100px",
+            }}
+          >
+            <Image
+              src={logo}
+              width="266px"
+              height="63px"
+              alt="logo"
+              objectFit="initial"
+            />
+          </Box>
+
+          <Box
+            css={{
+              display: "grid",
+              alignItems: "center",
+              gridAutoRows: "1fr",
+              gridTemplateColumns: "auto 1fr",
+            }}
+          >
+            <Box css={{ mr: "$5" }}>
+              <Row justify="flex-end" align="center" gap={1}>
+                <TextLink fontSize="tiny" href="">
+                  Career
+                </TextLink>
+                <Dot />
+                <TextLink fontSize="tiny" href="">
+                  About Us
+                </TextLink>
+                <Dot />
+                <TextLink fontSize="tiny" href="">
+                  Contact
+                </TextLink>
+              </Row>
+              <Row justify="flex-end" align="center" gap={1}>
+                <TextLink href="">Oil and Gas</TextLink>
+                <TextLink href="">Coal and Minerals</TextLink>
+                <TextLink href="">Geothermal</TextLink>
+                <TextLink href="">Trade and Services</TextLink>
+              </Row>
+            </Box>
+
+            <Button
+              auto
+              onPress={() => {
+                setExpand(true);
+              }}
+              css={{
+                backgroundColor: "#363C9A",
+                zIndex: 0,
+                borderRadius: "0",
+                height: "100%",
+                width: "90px",
+              }}
+            >
+              <IoSearchOutline size={30} />
+            </Button>
+          </Box>
         </Box>
       </Box>
     </Box>

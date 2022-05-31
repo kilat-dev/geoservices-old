@@ -27,7 +27,18 @@ const BreadCrumbLine = ({ items, ...rest }: BreadCrumbLineProps) => {
                 alignItems: "center",
               }}
             >
-              <TextLink href={item.url}>{item.title}</TextLink>
+              <TextLink
+                css={{
+                  color: item?.textColor ? item?.textColor : "default",
+                  fontStyle: "normal",
+                  fontWeight: "400",
+                  fontSize: "16px",
+                  lineHeight: "19px",
+                }}
+                href={item.url}
+              >
+                {item.title}
+              </TextLink>
             </Box>
 
             {index < items.length - 1 && (

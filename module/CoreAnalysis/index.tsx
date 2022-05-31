@@ -7,7 +7,6 @@ const CardText = styled(Text, {
   fontWeight: "400",
   fontSize: "32px",
   lineHeight: "39px",
-  color: "#4F4F4F",
 });
 
 const CoreAnalysis = () => {
@@ -17,8 +16,9 @@ const CoreAnalysis = () => {
         display: "grid",
         gridAutoRows: "1fr",
         gridTemplateColumns: "1fr 1fr 1fr",
-        gap: "30px",
-        my: "$20",
+        gap: "30px 60px",
+        mt: "$15",
+        mb: "$40",
         justifyItems: "center",
       }}
     >
@@ -28,27 +28,34 @@ const CoreAnalysis = () => {
           minHeight: "150px",
           minWidth: "350px",
           backgroundColor: "#F8F8F8",
+          boxShadow: "10px 10px #E0E0E0",
         }}
       >
-        <CardText>Wellsite Core handling & Preservation</CardText>
+        <CardText css={{ color: "#4F4F4F" }}>
+          Wellsite Core handling & Preservation
+        </CardText>
       </Card>
       <Card
         css={{
           minHeight: "150px",
           minWidth: "350px",
           backgroundColor: "#F8F8F8",
+          boxShadow: "10px 10px #E0E0E0",
         }}
       >
-        <CardText>Laboratory Preservation </CardText>
+        <CardText css={{ color: "#4F4F4F" }}>Laboratory Preservation </CardText>
       </Card>
       <Card
         css={{
           minHeight: "150px",
           minWidth: "350px",
           backgroundColor: "#F8F8F8",
+          boxShadow: "10px 10px #E0E0E0",
         }}
       >
-        <CardText>Gamma Logging& CT Scanning </CardText>
+        <CardText css={{ color: "#4F4F4F" }}>
+          Gamma Logging& CT Scanning{" "}
+        </CardText>
       </Card>
 
       {/* ROW 2 */}
@@ -57,27 +64,32 @@ const CoreAnalysis = () => {
           minHeight: "150px",
           minWidth: "350px",
           backgroundColor: "#F8F8F8",
+          boxShadow: "10px 10px #E0E0E0",
         }}
       >
-        <CardText>Conventional & Digital Photography </CardText>
+        <CardText css={{ color: "#4F4F4F" }}>
+          Conventional & Digital Photography{" "}
+        </CardText>
       </Card>
       <Card
         css={{
           minHeight: "150px",
           minWidth: "350px",
           backgroundColor: "#F8F8F8",
+          boxShadow: "10px 10px #E0E0E0",
         }}
       >
-        <CardText>Routine Core Analysis </CardText>
+        <CardText css={{ color: "#4F4F4F" }}>Routine Core Analysis </CardText>
       </Card>
       <Card
         css={{
           minHeight: "150px",
           minWidth: "350px",
           backgroundColor: "#F8F8F8",
+          boxShadow: "10px 10px #E0E0E0",
         }}
       >
-        <CardText>Special Core Analysis </CardText>
+        <CardText css={{ color: "#4F4F4F" }}>Special Core Analysis </CardText>
       </Card>
 
       {/* ROW 3 */}
@@ -86,27 +98,32 @@ const CoreAnalysis = () => {
           minHeight: "150px",
           minWidth: "350px",
           backgroundColor: "#F8F8F8",
+          boxShadow: "10px 10px #E0E0E0",
         }}
       >
-        <CardText>Reservoir Unitization </CardText>
+        <CardText css={{ color: "#4F4F4F" }}>Reservoir Unitization </CardText>
       </Card>
       <Card
         css={{
           minHeight: "150px",
           minWidth: "350px",
           backgroundColor: "#F8F8F8",
+          boxShadow: "10px 10px #E0E0E0",
         }}
       >
-        <CardText>Formation Damage Evaluation </CardText>
+        <CardText css={{ color: "#4F4F4F" }}>
+          Formation Damage Evaluation{" "}
+        </CardText>
       </Card>
       <Card
         css={{
           minHeight: "150px",
           minWidth: "350px",
           backgroundColor: "#F8F8F8",
+          boxShadow: "10px 10px #E0E0E0",
         }}
       >
-        <CardText>Rock Mechanics </CardText>
+        <CardText css={{ color: "#4F4F4F" }}>Rock Mechanics </CardText>
       </Card>
     </Box>
   );
