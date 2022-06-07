@@ -4,8 +4,8 @@ import React from "react";
 
 export interface TextLinkProps {
   href: string;
-  fontSize: string;
-  children: JSX.Element;
+  fontSize?: string;
+  children?: JSX.Element | string;
   [x: string]: any;
 }
 
