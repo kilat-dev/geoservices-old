@@ -25,5 +25,10 @@
         "prettier/prettier": "error",
         "object-curly-spacing": "off",
         "quotes": "off"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     }
 }

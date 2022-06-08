@@ -1,8 +1,4 @@
 import React from "react";
-import imgBackground from "assets/bg-energyevolution.png";
-import imgCart from "assets/cart-vector.png";
-import imgResearch from "assets/research-vector.png";
-import imgSearch from "assets/search-vector.png";
 import {
   Text,
   Container,
@@ -13,14 +9,19 @@ import {
   Card,
 } from "@nextui-org/react";
 import { BsArrowRight } from "react-icons/bs";
-import Box from "components/Box";
+import Box from "reusables/Box";
 
 const EnergyEvolutionSection = () => {
+  const imgBackground = "/assets/bg-energyevolution.png";
+  const imgCart = "/assets/cart-vector.png";
+  const imgResearch = "/assets/research-vector.png";
+  const imgSearch = "/assets/search-vector.png";
+
   return (
     <>
       <Box css={{ position: "relative", background: "$black" }}>
         <Image
-          src={imgBackground.src}
+          src={imgBackground}
           objectFit="fill"
           height="834px"
           containerCss={{
@@ -105,7 +106,17 @@ const EnergyEvolutionSection = () => {
                     alignItems: "center",
                   }}
                 >
-                  <Text css={{ mr: "$10" }}>View More</Text>
+                  <Text
+                    css={{
+                      mr: "$10",
+                      fontStyle: "normal",
+                      fontWeight: "700",
+                      fontSize: "16px",
+                      lineHeight: "20px",
+                    }}
+                  >
+                    View More
+                  </Text>
                   <BsArrowRight color="#EC1C24" />
                 </Container>
               </Card>
@@ -137,7 +148,7 @@ const EnergyEvolutionSection = () => {
                     <Image
                       width={109}
                       height={98}
-                      src={imgSearch?.src}
+                      src={imgSearch}
                       containerCss={{ m: 0 }}
                     />
                   </Col>
@@ -145,7 +156,7 @@ const EnergyEvolutionSection = () => {
                     <Text
                       css={{
                         color: "#363C9A",
-                        fontFamily: "Inter",
+
                         fontStyle: "normal",
                         fontWeight: "700",
                         fontSize: "16px",
@@ -160,8 +171,8 @@ const EnergyEvolutionSection = () => {
                 <Row>
                   <Text
                     css={{
-                      color: "#BDBDBD",
-                      fontFamily: "Inter",
+                      color: "#828282",
+
                       fontStyle: "normal",
                       fontWeight: "400",
                       fontSize: "20px",
@@ -204,7 +215,7 @@ const EnergyEvolutionSection = () => {
                     <Image
                       width={109}
                       height={98}
-                      src={imgCart?.src}
+                      src={imgCart}
                       containerCss={{ m: 0 }}
                     />
                   </Col>
@@ -212,7 +223,7 @@ const EnergyEvolutionSection = () => {
                     <Text
                       css={{
                         color: "#363C9A",
-                        fontFamily: "Inter",
+
                         fontStyle: "normal",
                         fontWeight: "700",
                         fontSize: "16px",
@@ -227,8 +238,8 @@ const EnergyEvolutionSection = () => {
                 <Row>
                   <Text
                     css={{
-                      color: "#BDBDBD",
-                      fontFamily: "Inter",
+                      color: "#828282",
+
                       fontStyle: "normal",
                       fontWeight: "400",
                       fontSize: "20px",
@@ -270,7 +281,7 @@ const EnergyEvolutionSection = () => {
                     <Image
                       width={109}
                       height={98}
-                      src={imgResearch?.src}
+                      src={imgResearch}
                       containerCss={{ m: 0 }}
                     />
                   </Col>
@@ -278,7 +289,7 @@ const EnergyEvolutionSection = () => {
                     <Text
                       css={{
                         color: "#363C9A",
-                        fontFamily: "Inter",
+
                         fontStyle: "normal",
                         fontWeight: "700",
                         fontSize: "16px",
@@ -293,8 +304,8 @@ const EnergyEvolutionSection = () => {
                 <Row>
                   <Text
                     css={{
-                      color: "#BDBDBD",
-                      fontFamily: "Inter",
+                      color: "#828282",
+
                       fontStyle: "normal",
                       fontWeight: "400",
                       fontSize: "20px",

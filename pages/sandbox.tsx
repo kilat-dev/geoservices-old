@@ -1,89 +1,53 @@
 import React from "react";
-import logo from "assets/logo1.png";
-import { Container, Row, Spacer, Text } from "@nextui-org/react";
-import Image from "next/image";
+import Box from "reusables/Box";
+import { Image } from "@nextui-org/react";
 
-const Footer = () => {
+const Sandbox = () => {
+  const image1 = "/assets/bg-personlab1.png";
+  const image2 = "/assets/bg-personlab2.png";
+
   return (
-    <Row
+    <Box
       css={{
-        my: "$10",
         display: "grid",
         gridAutoRows: "1fr",
-        gridTemplateColumns: "50% 1fr 1fr",
+        gridTemplateColumns: "1fr 1fr",
+        my: "$20",
+        justifyItems: "center",
       }}
     >
-      <Row
-        css={{
-          width: "fit-content",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
+      {/* first row */}
+      <Box css={{ width: "100%" }}>
         <Image
-          src={logo?.src}
-          width="266px"
-          height="63px"
-          alt="logo"
-          objectFit="initial"
-        />
-        <Text
-          css={{
-            fontFamily: "Plus Jakarta Sans",
-            fontStyle: "normal",
-            fontWeight: "500",
-            fontSize: "16px",
-            lineHeight: "20px",
+          src={image1}
+          objectFit="fill"
+          height={600}
+          containerCss={{
+            borderRadius: "0",
           }}
-        >
-          Copyright © 2022 - PT Geoservices
-        </Text>
-      </Row>
-
-      <Container>
-        <Text css={{ fontSize: "16px", color: "#000000" }}>Jakarta Office</Text>
-        <Spacer y={1} />
-        <Text css={{ fontSize: "16px", color: "#828282" }}>
-          Jl. Minangkabau Barat No. 34,
-        </Text>
-        <Text css={{ fontSize: "16px", color: "#828282" }}>
-          {" "}
-          Jakarta, Indonesia
-        </Text>
-        <Text css={{ fontSize: "16px", color: "#828282" }}>
-          Phone : (021) 830 5555, 831 8989
-        </Text>
-        <Text css={{ fontSize: "16px", color: "#828282" }}>
-          Fax : (021) 831 1454
-        </Text>
-        <Text css={{ fontSize: "16px", color: "#828282" }}>
-          Email : jktbranch@geoservices.co.id
-        </Text>
-      </Container>
-
-      <Container>
-        <Text css={{ fontSize: "16px", color: "#000000" }}>Bandung Office</Text>
-        <Spacer y={1} />
-        <Text css={{ fontSize: "16px", color: "#828282" }}>
-          Jl. Setiabudhi No. 81,
-        </Text>
-        <Text css={{ fontSize: "16px", color: "#828282" }}>
-          {" "}
-          Bandung, Jawa Barat, Indonesia
-        </Text>
-        <Text css={{ fontSize: "16px", color: "#828282" }}>
-          Phone : (022) 203 1316, 203 5436
-        </Text>
-        <Text css={{ fontSize: "16px", color: "#828282" }}>
-          Fax : (022) 203 8090
-        </Text>
-        <Text css={{ fontSize: "16px", color: "#828282" }}>
-          Email : bdgoff@geoservices.co.id
-        </Text>
-      </Container>
-    </Row>
+          css={{
+            width: "100%",
+            height: "100%",
+            display: "block",
+            objectFit: "cover",
+          }}
+        />
+      </Box>
+      <Box>wa</Box>
+      <Box>wa</Box>
+      <Box css={{ width: "100%" }}>
+        <Image
+          src={image2}
+          objectFit="cover"
+          height={600}
+          containerCss={{
+            borderRadius: "0",
+          }}
+          css={{}}
+        />
+      </Box>
+    </Box>
   );
 };
 
-export default Footer;
+export default Sandbox;
