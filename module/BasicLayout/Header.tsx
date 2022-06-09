@@ -10,15 +10,16 @@ import Box from "reusables/Box";
 const Header = () => {
   const [isExpand, setExpand] = useState(false);
   const [searchKey, setSearchKey] = useState("");
-  const logo = "/assets/logo1.png";
+  const logo = "/assets/logo2.png";
 
   return (
-    <Box css={{ minHeight: "63px" }}>
+    <Box css={{ minHeight: "80px" }}>
       <Box
         css={{
           m: 0,
           p: 0,
           top: 0,
+          minHeight: "80px",
           position: "fixed",
           zIndex: 2,
           background: "rgba(255, 255, 255, 0.8)",
