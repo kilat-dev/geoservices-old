@@ -6,12 +6,19 @@ export interface TextLinkProps {
   href: string;
   fontSize?: string;
   children?: JSX.Element | string;
+  textCSS?: any;
   [x: string]: any;
 }
 
-const TextLink = ({ href, fontSize, children, ...rest }: TextLinkProps) => {
+const TextLink = ({
+  href,
+  fontSize,
+  children,
+  textCSS,
+  ...rest
+}: TextLinkProps) => {
   return (
-    <Text>
+    <Text css={textCSS}>
       <NextLink href={href} passHref>
         <Link
           color="text"
