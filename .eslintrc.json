@@ -24,7 +24,8 @@
     "rules": {
         "prettier/prettier": "error",
         "object-curly-spacing": "off",
-        "quotes": "off"
+        "quotes": "off",
+        "quote-props": "off",
     },
     "settings": {
         "react": {

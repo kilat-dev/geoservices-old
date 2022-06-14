@@ -115,8 +115,15 @@ const Header = () => {
               </Row>
               <Row justify="flex-end" align="center" gap={1}>
                 <Nav {...menu}>
-                  <Text>
-                    <a href="#">Oil and Gas</a>
+                  <Text
+                    css={{
+                      cursor: "pointer",
+                      "&:hover": {
+                        color: "$gray700",
+                      },
+                    }}
+                  >
+                    Oil and Gas
                   </Text>
                 </Nav>
 

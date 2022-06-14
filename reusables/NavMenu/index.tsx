@@ -45,7 +45,7 @@ export interface NavProps extends NavMenuProps {
 
 export const Nav = ({ children, MainMenu, getSubMenu, ...rest }: NavProps) => {
   return (
-    <Popover {...rest} placement="bottom-right" disableAnimation>
+    <Popover {...rest} placement="bottom-right" disableAnimation offset={18}>
       <Popover.Trigger>{children}</Popover.Trigger>
       <Popover.Content
         css={{

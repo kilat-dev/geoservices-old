@@ -3,7 +3,7 @@ import { Container, Row, Spacer, Text } from "@nextui-org/react";
 import Image from "next/image";
 
 const Footer = () => {
-  const logo = "/assets/logo1.png";
+  const logo = "/assets/logo2.png";
 
   return (
     <Row
