@@ -64,7 +64,7 @@ const EnergyEvolutionSection = () => {
               </Text>
 
               <Spacer y={1} />
-              <Card css={{ height: "3px", backgroundColor: "#D3252C" }} />
+              <Box css={{ height: "3px", backgroundColor: "#D3252C" }} />
             </Col>
 
             {/* right side */}
@@ -93,17 +93,18 @@ const EnergyEvolutionSection = () => {
               </Text>
 
               <Card
-                clickable
+                isPressable
                 css={{
                   width: "fit-content",
                 }}
               >
-                <Container
+                <Box
                   css={{
                     width: "fit-content",
                     display: "flex",
                     flexDirection: "row",
                     alignItems: "center",
+                    p: "10px 10px 10px 10px",
                   }}
                 >
                   <Text
@@ -118,7 +119,7 @@ const EnergyEvolutionSection = () => {
                     View More
                   </Text>
                   <BsArrowRight color="#EC1C24" />
-                </Container>
+                </Box>
               </Card>
             </Col>
           </Row>
@@ -135,11 +136,12 @@ const EnergyEvolutionSection = () => {
         >
           <Col>
             <Card
-              shadow={false}
+              variant="bordered"
               css={{
                 minHeight: "200px",
                 borderRadius: "$lg 0px 0px $lg",
                 overflow: "hidden",
+                border: "none",
               }}
             >
               <Container>
@@ -202,11 +204,12 @@ const EnergyEvolutionSection = () => {
 
           <Col>
             <Card
-              shadow={false}
+              variant="bordered"
               css={{
                 minHeight: "200px",
                 borderRadius: "0px 0px 0px 0px",
                 overflow: "hidden",
+                border: "none",
               }}
             >
               <Container>
@@ -268,9 +271,10 @@ const EnergyEvolutionSection = () => {
 
           <Col>
             <Card
-              shadow={false}
+              variant="bordered"
               css={{
                 minHeight: "200px",
+                border: "none",
                 borderRadius: "0 $lg $lg 0",
                 overflow: "hidden",
               }}

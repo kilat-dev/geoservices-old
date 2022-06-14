@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Box from "reusables/Box";
 import { Popover } from "@nextui-org/react";
-import oilAndGasMenu from "reusables/NavMenu/OilAndGasMenu";
-
 import { NavMainMenuProps } from "reusables/types";
 
 export interface NavMenuProps {
@@ -40,13 +38,14 @@ export const NavMenu = ({ MainMenu, getSubMenu }: NavMenuProps) => {
   );
 };
 
-export interface NavProps {
+export interface NavProps extends NavMenuProps {
   children: JSX.Element;
+  [x: string]: any;
 }
 
-export const Nav = ({ children }: NavProps) => {
+export const Nav = ({ children, MainMenu, getSubMenu, ...rest }: NavProps) => {
   return (
-    <Popover placement="bottom-right" disableAnimation>
+    <Popover {...rest} placement="bottom-right" disableAnimation>
       <Popover.Trigger>{children}</Popover.Trigger>
       <Popover.Content
         css={{
@@ -56,7 +55,7 @@ export const Nav = ({ children }: NavProps) => {
           maxWidth: "100%",
         }}
       >
-        <NavMenu {...oilAndGasMenu} />
+        <NavMenu MainMenu={MainMenu} getSubMenu={getSubMenu} />
       </Popover.Content>
     </Popover>
   );

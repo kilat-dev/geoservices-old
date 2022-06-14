@@ -9,6 +9,7 @@ import {
   Card,
 } from "@nextui-org/react";
 import { BsArrowRight } from "react-icons/bs";
+import Box from "reusables/Box";
 
 const OurSpecialtySection = () => {
   const imgBackground1 = "/assets/bg-coal1.png";
@@ -20,7 +21,7 @@ const OurSpecialtySection = () => {
     <Container xl css={{ p: 0, overflow: "hidden" }}>
       {/* CARD TITLE */}
       <Row align="center" gap={4} css={{ my: "$6" }}>
-        <Card
+        <Box
           css={{ width: "56px", height: "3px", backgroundColor: "#363C9A" }}
         />
         <Text
@@ -109,10 +110,11 @@ const OurSpecialtySection = () => {
 
           <Row align="flex-end" css={{ height: "100%" }}>
             <Card
-              clickable
-              shadow={false}
+              isPressable
+              variant="flat"
               css={{
                 width: "fit-content",
+                backgroundColor: "white",
               }}
             >
               <Container
@@ -121,6 +123,7 @@ const OurSpecialtySection = () => {
                   display: "flex",
                   flexDirection: "row",
                   alignItems: "center",
+                  p: "10px 10px 10px 10px",
                 }}
               >
                 <Text
@@ -205,10 +208,11 @@ const OurSpecialtySection = () => {
 
           <Row align="flex-end" css={{ height: "100%" }}>
             <Card
-              clickable
-              shadow={false}
+              isPressable
+              variant="flat"
               css={{
                 width: "fit-content",
+                backgroundColor: "white",
               }}
             >
               <Container
@@ -217,6 +221,7 @@ const OurSpecialtySection = () => {
                   display: "flex",
                   flexDirection: "row",
                   alignItems: "center",
+                  p: "10px 10px 10px 10px",
                 }}
               >
                 <Text
@@ -319,10 +324,11 @@ const OurSpecialtySection = () => {
 
           <Row align="flex-end" css={{ height: "100%" }}>
             <Card
-              clickable
-              shadow={false}
+              isPressable
+              variant="flat"
               css={{
                 width: "fit-content",
+                backgroundColor: "white",
               }}
             >
               <Container
@@ -331,6 +337,7 @@ const OurSpecialtySection = () => {
                   display: "flex",
                   flexDirection: "row",
                   alignItems: "center",
+                  p: "10px 10px 10px 10px",
                 }}
               >
                 <Text

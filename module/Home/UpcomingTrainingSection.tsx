@@ -10,6 +10,7 @@ import {
   Image,
 } from "@nextui-org/react";
 import { BsArrowRight } from "react-icons/bs";
+import Box from "reusables/Box";
 
 const UpcomingTrainingSection = () => {
   const imgBackground = "/assets/bg-training.png";
@@ -38,7 +39,7 @@ const UpcomingTrainingSection = () => {
         {/* TITLE */}
         <Row justify="space-between" align="center">
           <Row align="center" gap={4} css={{ my: "$6" }}>
-            <Card
+            <Box
               css={{ width: "56px", height: "3px", backgroundColor: "#F2F2F2" }}
             />
             <Text
@@ -55,10 +56,11 @@ const UpcomingTrainingSection = () => {
           </Row>
 
           <Card
-            clickable
+            isPressable
             css={{
               width: "200px",
               my: "$6",
+              p: "10px 10px 10px 10px",
             }}
           >
             <Container
@@ -86,8 +88,20 @@ const UpcomingTrainingSection = () => {
           }}
         >
           {/* CARD 1 */}
-          <Col css={{ height: "100%" }}>
-            <Card css={{ backgroundColor: "transparent", height: "100%" }}>
+          <Col
+            css={{
+              height: "100%",
+            }}
+          >
+            <Card
+              css={{
+                backgroundColor: "transparent",
+                height: "100%",
+                border: "1px white solid",
+                borderRadius: "10px",
+                p: "10px 10px 10px 20px",
+              }}
+            >
               <Row css={{ pt: "$10" }}>
                 <Text
                   css={{
@@ -122,11 +136,12 @@ const UpcomingTrainingSection = () => {
               <Spacer y={2} />
               <Row align="flex-end" css={{ height: "100%" }}>
                 <Card
-                  clickable
-                  shadow={false}
+                  isPressable
+                  variant="flat"
                   css={{
                     width: "fit-content",
                     backgroundColor: "transparent",
+                    p: "10px 10px 10px 10px",
                   }}
                 >
                   <Container
@@ -158,8 +173,20 @@ const UpcomingTrainingSection = () => {
           </Col>
 
           {/* CARD 2 */}
-          <Col css={{ height: "100%" }}>
-            <Card css={{ backgroundColor: "transparent", height: "100%" }}>
+          <Col
+            css={{
+              height: "100%",
+            }}
+          >
+            <Card
+              css={{
+                backgroundColor: "transparent",
+                height: "100%",
+                border: "1px white solid",
+                borderRadius: "10px",
+                p: "10px 10px 10px 20px",
+              }}
+            >
               <Row css={{ pt: "$10" }}>
                 <Text
                   css={{
@@ -194,11 +221,12 @@ const UpcomingTrainingSection = () => {
               <Spacer y={2} />
               <Row align="flex-end" css={{ height: "100%" }}>
                 <Card
-                  clickable
-                  shadow={false}
+                  isPressable
+                  variant="flat"
                   css={{
                     width: "fit-content",
                     backgroundColor: "transparent",
+                    p: "10px 10px 10px 10px",
                   }}
                 >
                   <Container
@@ -230,8 +258,20 @@ const UpcomingTrainingSection = () => {
           </Col>
 
           {/* CARD 3 */}
-          <Col css={{ height: "100%" }}>
-            <Card css={{ backgroundColor: "transparent", height: "100%" }}>
+          <Col
+            css={{
+              height: "100%",
+            }}
+          >
+            <Card
+              css={{
+                backgroundColor: "transparent",
+                height: "100%",
+                border: "1px white solid",
+                borderRadius: "10px",
+                p: "10px 10px 10px 20px",
+              }}
+            >
               <Row css={{ pt: "$10" }}>
                 <Text
                   css={{
@@ -266,11 +306,12 @@ const UpcomingTrainingSection = () => {
               <Spacer y={2} />
               <Row align="flex-end" css={{ height: "100%" }}>
                 <Card
-                  clickable
-                  shadow={false}
+                  isPressable
+                  variant="flat"
                   css={{
                     width: "fit-content",
                     backgroundColor: "transparent",
+                    p: "10px 10px 10px 10px",
                   }}
                 >
                   <Container
