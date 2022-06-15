@@ -10,6 +10,7 @@ export const options = [
   {
     name: "software",
     label: "Software",
+    url: PAGES.SOFTWARE.url
   },
   {
     name: "training",

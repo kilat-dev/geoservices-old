@@ -41,7 +41,7 @@ export const MainMenu = ({ onChange, selected }: NavMainMenuProps) => {
         </Text>
       </Box>
       {options?.map((item) => (
-        <a key={item?.name} href="#" onClick={handleSelect(item?.name)}>
+        <a key={item?.name} href={item?.url} onMouseOver={handleSelect(item?.name)}>
           <Box
             css={{
               margin: "10px",
@@ -57,6 +57,7 @@ export const MainMenu = ({ onChange, selected }: NavMainMenuProps) => {
                 fontSize: "18px",
                 lineHeight: "22px",
                 color: selected === item?.name ? selectedColor : defaultColor,
+                cursor: "pointer",
               }}
             >
               {item?.label}
