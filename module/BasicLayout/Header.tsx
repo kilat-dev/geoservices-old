@@ -1,24 +1,27 @@
 import React, { useState } from "react";
-import { Row, Button, Input } from "@nextui-org/react";
+import { Row, Button, Input, Text } from "@nextui-org/react";
 import { IoSearchOutline } from "react-icons/io5";
 import { ImCancelCircle } from "react-icons/im";
 import Image from "next/image";
 import TextLink from "reusables/TextLink";
 import Dot from "reusables/Dot";
 import Box from "reusables/Box";
+import { Nav } from "reusables/NavMenu";
+import menu from "reusables/NavMenu/OilAndGasMenu";
 
 const Header = () => {
   const [isExpand, setExpand] = useState(false);
   const [searchKey, setSearchKey] = useState("");
-  const logo = "/assets/logo1.png";
+  const logo = "/assets/logo2.png";
 
   return (
-    <Box css={{ minHeight: "63px" }}>
+    <Box css={{ minHeight: "80px" }}>
       <Box
         css={{
           m: 0,
           p: 0,
           top: 0,
+          minHeight: "80px",
           position: "fixed",
           zIndex: 2,
           background: "rgba(255, 255, 255, 0.8)",
@@ -111,7 +114,20 @@ const Header = () => {
                 </TextLink>
               </Row>
               <Row justify="flex-end" align="center" gap={1}>
-                <TextLink href="">Oil and Gas</TextLink>
+                <Nav {...menu}>
+                  <Text
+                    css={{
+                      cursor: "pointer",
+                      "&:hover": {
+                        color: "$gray700",
+                      },
+                    }}
+                  >
+                    Oil and Gas
+                  </Text>
+                </Nav>
+
+                {/* <TextLink href="">Oil and Gas</TextLink> */}
                 <TextLink href="">Coal and Minerals</TextLink>
                 <TextLink href="">Geothermal</TextLink>
                 <TextLink href="">Trade and Services</TextLink>

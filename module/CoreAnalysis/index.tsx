@@ -9,6 +9,45 @@ const CardText = styled(Text, {
   lineHeight: "39px",
 });
 
+const cards = [
+  {
+    id: "0",
+    text: "Wellsite Core handling & Preservation",
+  },
+  {
+    id: "1",
+    text: "Laboratory Preservation",
+  },
+  {
+    id: "2",
+    text: "Gamma Logging & CT Scanning",
+  },
+  {
+    id: "3",
+    text: "Conventional & Digital Photography",
+  },
+  {
+    id: "4",
+    text: "Routine Core Analysis",
+  },
+  {
+    id: "5",
+    text: "Special Core Analysis",
+  },
+  {
+    id: "6",
+    text: "Reservoir Unitization",
+  },
+  {
+    id: "7",
+    text: "Formation Damage Evaluation",
+  },
+  {
+    id: "8",
+    text: "Rock Mechanics",
+  },
+];
+
 const CoreAnalysis = () => {
   return (
     <Box
@@ -23,108 +62,20 @@ const CoreAnalysis = () => {
       }}
     >
       {/* ROW 1 */}
-      <Card
-        css={{
-          minHeight: "150px",
-          minWidth: "350px",
-          backgroundColor: "#F8F8F8",
-          boxShadow: "10px 10px #E0E0E0",
-        }}
-      >
-        <CardText css={{ color: "#4F4F4F" }}>
-          Wellsite Core handling & Preservation
-        </CardText>
-      </Card>
-      <Card
-        css={{
-          minHeight: "150px",
-          minWidth: "350px",
-          backgroundColor: "#F8F8F8",
-          boxShadow: "10px 10px #E0E0E0",
-        }}
-      >
-        <CardText css={{ color: "#4F4F4F" }}>Laboratory Preservation </CardText>
-      </Card>
-      <Card
-        css={{
-          minHeight: "150px",
-          minWidth: "350px",
-          backgroundColor: "#F8F8F8",
-          boxShadow: "10px 10px #E0E0E0",
-        }}
-      >
-        <CardText css={{ color: "#4F4F4F" }}>
-          Gamma Logging& CT Scanning{" "}
-        </CardText>
-      </Card>
-
-      {/* ROW 2 */}
-      <Card
-        css={{
-          minHeight: "150px",
-          minWidth: "350px",
-          backgroundColor: "#F8F8F8",
-          boxShadow: "10px 10px #E0E0E0",
-        }}
-      >
-        <CardText css={{ color: "#4F4F4F" }}>
-          Conventional & Digital Photography{" "}
-        </CardText>
-      </Card>
-      <Card
-        css={{
-          minHeight: "150px",
-          minWidth: "350px",
-          backgroundColor: "#F8F8F8",
-          boxShadow: "10px 10px #E0E0E0",
-        }}
-      >
-        <CardText css={{ color: "#4F4F4F" }}>Routine Core Analysis </CardText>
-      </Card>
-      <Card
-        css={{
-          minHeight: "150px",
-          minWidth: "350px",
-          backgroundColor: "#F8F8F8",
-          boxShadow: "10px 10px #E0E0E0",
-        }}
-      >
-        <CardText css={{ color: "#4F4F4F" }}>Special Core Analysis </CardText>
-      </Card>
-
-      {/* ROW 3 */}
-      <Card
-        css={{
-          minHeight: "150px",
-          minWidth: "350px",
-          backgroundColor: "#F8F8F8",
-          boxShadow: "10px 10px #E0E0E0",
-        }}
-      >
-        <CardText css={{ color: "#4F4F4F" }}>Reservoir Unitization </CardText>
-      </Card>
-      <Card
-        css={{
-          minHeight: "150px",
-          minWidth: "350px",
-          backgroundColor: "#F8F8F8",
-          boxShadow: "10px 10px #E0E0E0",
-        }}
-      >
-        <CardText css={{ color: "#4F4F4F" }}>
-          Formation Damage Evaluation{" "}
-        </CardText>
-      </Card>
-      <Card
-        css={{
-          minHeight: "150px",
-          minWidth: "350px",
-          backgroundColor: "#F8F8F8",
-          boxShadow: "10px 10px #E0E0E0",
-        }}
-      >
-        <CardText css={{ color: "#4F4F4F" }}>Rock Mechanics </CardText>
-      </Card>
+      {cards?.map((card) => (
+        <Card
+          key={card.id}
+          css={{
+            minHeight: "150px",
+            minWidth: "350px",
+            backgroundColor: "#F8F8F8",
+            boxShadow: "10px 10px #E0E0E0",
+            padding: "$10",
+          }}
+        >
+          <CardText css={{ color: "#4F4F4F" }}>{card.text}</CardText>
+        </Card>
+      ))}
     </Box>
   );
 };

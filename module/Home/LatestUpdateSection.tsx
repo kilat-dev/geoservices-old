@@ -10,7 +10,7 @@ const LatestUpdateSection = () => {
       <Container css={{ my: "$20" }}>
         {/* TITLE */}
         <Row align="center" gap={4} css={{ mb: "$6" }}>
-          <Card
+          <Box
             css={{ width: "56px", height: "3px", backgroundColor: "#363C9A" }}
           />
           <Text
@@ -39,6 +39,7 @@ const LatestUpdateSection = () => {
                 height: "100%",
                 backgroundColor: "#F8F8F8",
                 boxShadow: "10px 10px #E0E0E0",
+                p: "20px",
               }}
             >
               <Row css={{ pt: "$10" }}>
@@ -73,10 +74,12 @@ const LatestUpdateSection = () => {
               <Spacer y={2} />
               <Row align="flex-end" css={{ height: "100%" }}>
                 <Card
-                  clickable
-                  shadow={false}
+                  isPressable
+                  variant="flat"
                   css={{
                     width: "fit-content",
+                    backgroundColor: "transparent",
+                    p: "10px 10px 10px 10px",
                   }}
                 >
                   <Container
@@ -113,6 +116,7 @@ const LatestUpdateSection = () => {
                 height: "100%",
                 backgroundColor: "#F8F8F8",
                 boxShadow: "10px 10px #E0E0E0",
+                p: "20px",
               }}
             >
               <Row css={{ pt: "$10" }}>
@@ -149,10 +153,12 @@ const LatestUpdateSection = () => {
               <Spacer y={2} />
               <Row align="flex-end" css={{ height: "100%" }}>
                 <Card
-                  clickable
-                  shadow={false}
+                  isPressable
+                  variant="flat"
                   css={{
                     width: "fit-content",
+                    backgroundColor: "transparent",
+                    p: "10px 10px 10px 10px",
                   }}
                 >
                   <Container
@@ -189,6 +195,7 @@ const LatestUpdateSection = () => {
                 height: "100%",
                 backgroundColor: "#F8F8F8",
                 boxShadow: "10px 10px #E0E0E0",
+                p: "20px",
               }}
             >
               <Row css={{ pt: "$10" }}>
@@ -224,10 +231,12 @@ const LatestUpdateSection = () => {
               <Spacer y={2} />
               <Row align="flex-end" css={{ height: "100%" }}>
                 <Card
-                  clickable
-                  shadow={false}
+                  isPressable
+                  variant="flat"
                   css={{
                     width: "fit-content",
+                    backgroundColor: "transparent",
+                    p: "10px 10px 10px 10px",
                   }}
                 >
                   <Container
