@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Box from "reusables/Box";
-import { Popover } from "@nextui-org/react";
+import { Popover, styled } from "@nextui-org/react";
 import { NavMainMenuProps } from "reusables/types";
 
 export interface NavMenuProps {
@@ -43,7 +43,7 @@ export interface NavProps extends NavMenuProps {
   [x: string]: any;
 }
 
-export const Nav = ({ children, MainMenu, getSubMenu, ...rest }: NavProps) => {
+const Nav = ({ children, MainMenu, getSubMenu, ...rest }: NavProps) => {
   return (
     <Popover {...rest} placement="bottom-right" disableAnimation offset={18}>
       <Popover.Trigger>{children}</Popover.Trigger>
@@ -60,3 +60,9 @@ export const Nav = ({ children, MainMenu, getSubMenu, ...rest }: NavProps) => {
     </Popover>
   );
 };
+
+const styledNav = styled(Nav)
+
+export {
+  styledNav as Nav
+}
