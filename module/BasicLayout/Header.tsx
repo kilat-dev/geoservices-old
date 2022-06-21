@@ -10,11 +10,11 @@ import { Nav } from "reusables/NavMenu";
 import menu from "reusables/NavMenu/OilAndGasMenu";
 
 const headerTextCSS = {
-  fontSize: '10px',
-  '@sm': {
-    fontSize: '16px'
-  }
-}
+  fontSize: "10px",
+  "@sm": {
+    fontSize: "16px",
+  },
+};
 
 const Header = () => {
   const [isExpand, setExpand] = useState(false);
@@ -44,9 +44,9 @@ const Header = () => {
             alignItem: "center",
             position: "relative",
             height: "100%",
-            '@sm': {
+            "@sm": {
               justifyContent: "space-between",
-            }
+            },
           }}
         >
           <Box
@@ -90,9 +90,9 @@ const Header = () => {
               display: "none",
               alignItems: "center",
               pl: "100px",
-              '@sm': {
-                display: 'flex',
-              }
+              "@sm": {
+                display: "flex",
+              },
             }}
           >
             <Image
@@ -126,7 +126,7 @@ const Header = () => {
                   Contact
                 </TextLink>
               </Row>
-              <Row justify="flex-end" align="center" gap={1} css={{my: '$2'}}>
+              <Row justify="flex-end" align="center" gap={1} css={{ my: "$2" }}>
                 <Nav {...menu}>
                   <Text
                     css={{
@@ -135,7 +135,7 @@ const Header = () => {
                       "&:hover": {
                         color: "$gray700",
                       },
-                      height: '100%'
+                      height: "100%",
                     }}
                   >
                     Oil and Gas
@@ -143,37 +143,40 @@ const Header = () => {
                 </Nav>
 
                 <Text
-                    css={{
-                      ...headerTextCSS,
-                      cursor: "pointer",
-                      "&:hover": {
-                        color: "$gray700",
-                      },
-                      height: '100%'
-                    }}
-                  >Coal and Minerals
+                  css={{
+                    ...headerTextCSS,
+                    cursor: "pointer",
+                    "&:hover": {
+                      color: "$gray700",
+                    },
+                    height: "100%",
+                  }}
+                >
+                  Coal and Minerals
                 </Text>
                 <Text
-                    css={{
-                      ...headerTextCSS,
-                      cursor: "pointer",
-                      "&:hover": {
-                        color: "$gray700",
-                      },
-                      height: '100%'
-                    }}
-                  >Geothermal
+                  css={{
+                    ...headerTextCSS,
+                    cursor: "pointer",
+                    "&:hover": {
+                      color: "$gray700",
+                    },
+                    height: "100%",
+                  }}
+                >
+                  Geothermal
                 </Text>
                 <Text
-                    css={{
-                      ...headerTextCSS,
-                      cursor: "pointer",
-                      "&:hover": {
-                        color: "$gray700",
-                      },
-                      height: '100%'
-                    }}
-                  >Trade and Services
+                  css={{
+                    ...headerTextCSS,
+                    cursor: "pointer",
+                    "&:hover": {
+                      color: "$gray700",
+                    },
+                    height: "100%",
+                  }}
+                >
+                  Trade and Services
                 </Text>
               </Row>
             </Box>
