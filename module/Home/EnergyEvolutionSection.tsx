@@ -41,10 +41,11 @@ const EnergyEvolutionSection = () => {
             css={{
               position: "relative",
               paddingTop: "215px",
-              paddingLeft: "120px",
+              left: "5%",
               display: "grid",
               gridAutoRows: "1fr",
-              gridTemplateColumns: "400px 526px",
+              gridTemplateColumns: "400px 1fr",
+              overflowWrap: 'break-word'
             }}
             gap={2}
           >
@@ -75,6 +76,7 @@ const EnergyEvolutionSection = () => {
                 justifyContent: "space-between",
                 paddingTop: "25px",
                 height: "100%",
+                maxWidth: "564px",
               }}
             >
               <Text

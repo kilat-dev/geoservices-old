@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Spacer, Text } from "@nextui-org/react";
 import Image from "next/image";
+import Box from "reusables/Box";
 
 const Footer = () => {
   const logo = "/assets/logo2.png";
@@ -10,7 +11,6 @@ const Footer = () => {
       css={{
         mt: "$10",
         mb: "$40",
-        px: "$40",
         display: "grid",
         gridAutoRows: "1fr",
         gridTemplateColumns: "50% 1fr 1fr",
@@ -22,6 +22,7 @@ const Footer = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          left: "20%",
         }}
       >
         <Image
@@ -44,7 +45,7 @@ const Footer = () => {
         </Text>
       </Row>
 
-      <Container>
+      <Box>
         <Text css={{ fontSize: "16px", color: "#000000" }}>Jakarta Office</Text>
         <Spacer y={1} />
         <Text css={{ fontSize: "16px", color: "#828282" }}>
@@ -63,9 +64,9 @@ const Footer = () => {
         <Text css={{ fontSize: "16px", color: "#828282" }}>
           Email : jktbranch@geoservices.co.id
         </Text>
-      </Container>
+      </Box>
 
-      <Container>
+      <Box>
         <Text css={{ fontSize: "16px", color: "#000000" }}>Bandung Office</Text>
         <Spacer y={1} />
         <Text css={{ fontSize: "16px", color: "#828282" }}>
@@ -84,7 +85,7 @@ const Footer = () => {
         <Text css={{ fontSize: "16px", color: "#828282" }}>
           Email : bdgoff@geoservices.co.id
         </Text>
-      </Container>
+      </Box>
     </Row>
   );
 };
