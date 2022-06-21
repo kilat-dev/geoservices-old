@@ -58,7 +58,7 @@ const Nav = ({ children, MainMenu, getSubMenu, ...rest }: NavProps) => {
       if (!isHovered.current) {
         setOpen(false);
       }
-    }, 100);
+    }, 200);
   };
 
   return (
