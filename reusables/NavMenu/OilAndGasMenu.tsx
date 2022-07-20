@@ -1,6 +1,6 @@
 import React from "react";
 import Box from "reusables/Box";
-import { Image, Text } from "@nextui-org/react";
+import { Image, Text, Link } from "@nextui-org/react";
 import { BsArrowRight } from "react-icons/bs";
 import { NavMainMenuProps } from "reusables/types";
 import TextLink from "reusables/TextLink";
@@ -259,16 +259,19 @@ export const SoftwareSubMenu = () => {
           alignItems: "center",
         }}
       >
-        <Text
+        <Link
           css={{
             fontStyle: "normal",
             fontWeight: "700",
             fontSize: "18px",
             lineHeight: "22px",
+              color: 'black',
+              padding: '20px',
           }}
+          href={'/oil_and_gas/software'}
         >
           Software
-        </Text>
+        </Link>
       </Box>
 
       <Box css={{ display: "flex" }}>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Button, Input, Text } from "@nextui-org/react";
+import { Row, Button, Input, Text, Link } from "@nextui-org/react";
 import { IoSearchOutline } from "react-icons/io5";
 import { ImCancelCircle } from "react-icons/im";
 import Image from "next/image";
@@ -84,25 +84,26 @@ const Header = () => {
             />
           </Box>
 
-          <Box
+          <Link
             css={{
               height: "100%",
               display: "none",
               alignItems: "center",
-              pl: "100px",
+              pl: "120px",
               "@sm": {
                 display: "flex",
               },
             }}
+            href={'/'}
           >
             <Image
               src={logo}
-              width="266px"
-              height="63px"
+              width="200px"
+              height="48px"
               alt="logo"
-              objectFit="initial"
+              objectFit="cover"
             />
-          </Box>
+          </Link>
 
           <Box
             css={{

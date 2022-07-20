@@ -22,8 +22,8 @@ const EnergyEvolutionSection = () => {
       <Box css={{ position: "relative", background: "$black" }}>
         <Image
           src={imgBackground}
-          objectFit="fill"
-          height="834px"
+          objectFit="cover"
+          height="680px"
           containerCss={{
             width: "100%",
             borderRadius: "0",
@@ -40,7 +40,7 @@ const EnergyEvolutionSection = () => {
           <Row
             css={{
               position: "relative",
-              paddingTop: "215px",
+              paddingTop: "120px",
               left: "5%",
               display: "grid",
               gridAutoRows: "1fr",
@@ -59,6 +59,7 @@ const EnergyEvolutionSection = () => {
                   letterSpacing: "0em",
                   textAlign: "left",
                   color: "$white",
+                    marginTop: "7px"
                 }}
               >
                 The Energy Evolution
@@ -81,11 +82,10 @@ const EnergyEvolutionSection = () => {
             >
               <Text
                 css={{
-                  top: "25px",
                   fontStyle: "normal",
                   fontWeight: "400",
-                  fontSize: "20px",
-                  lineHeight: "25px",
+                  fontSize: "18px",
+                  lineHeight: 1.5,
                   color: "#FFFFFF",
                 }}
               >
@@ -111,11 +111,12 @@ const EnergyEvolutionSection = () => {
                 >
                   <Text
                     css={{
-                      mr: "$10",
-                      fontStyle: "normal",
-                      fontWeight: "700",
-                      fontSize: "16px",
-                      lineHeight: "20px",
+                        mr: "$10",
+                        fontStyle: "normal",
+                        fontWeight: "700",
+                        fontSize: "16px",
+                        lineHeight: "20px",
+                        padding: "5px 12px"
                     }}
                   >
                     View More
@@ -128,7 +129,7 @@ const EnergyEvolutionSection = () => {
         </Container>
       </Box>
 
-      <Container css={{ top: "-150px", position: "relative" }}>
+      <Container css={{ top: "-150px", position: "relative", maxWidth: '1240px' }}>
         <Row
           css={{
             display: "grid",
@@ -148,12 +149,12 @@ const EnergyEvolutionSection = () => {
             >
               <Container>
                 <Row align="center">
-                  <Col css={{ width: "fit-content" }}>
+                  <Col css={{ width: "fit-content", height: "120px" }}>
                     <Image
                       width={109}
                       height={98}
                       src={imgSearch}
-                      containerCss={{ m: 0 }}
+                      containerCss={{ m: 0, marginTop: '20px' }}
                     />
                   </Col>
                   <Col>
@@ -180,7 +181,7 @@ const EnergyEvolutionSection = () => {
                       fontStyle: "normal",
                       fontWeight: "400",
                       fontSize: "20px",
-                      lineHeight: "24px",
+                      lineHeight: 1.5,
                       mx: "$7",
                     }}
                   >
@@ -216,12 +217,12 @@ const EnergyEvolutionSection = () => {
             >
               <Container>
                 <Row align="center">
-                  <Col css={{ width: "fit-content" }}>
+                  <Col css={{ width: "fit-content", height: "120px" }}>
                     <Image
                       width={109}
                       height={98}
                       src={imgCart}
-                      containerCss={{ m: 0 }}
+                      containerCss={{ m: 0, marginTop: '20px' }}
                     />
                   </Col>
                   <Col>
@@ -244,11 +245,10 @@ const EnergyEvolutionSection = () => {
                   <Text
                     css={{
                       color: "#828282",
-
                       fontStyle: "normal",
                       fontWeight: "400",
                       fontSize: "20px",
-                      lineHeight: "24px",
+                      lineHeight: 1.5,
                       mx: "$7",
                     }}
                   >
@@ -283,19 +283,18 @@ const EnergyEvolutionSection = () => {
             >
               <Container>
                 <Row align="center">
-                  <Col css={{ width: "fit-content" }}>
+                  <Col css={{ width: "fit-content", height: "120px" }}>
                     <Image
                       width={109}
                       height={98}
                       src={imgResearch}
-                      containerCss={{ m: 0 }}
+                      containerCss={{ m: 0, marginTop: '20px' }}
                     />
                   </Col>
                   <Col>
                     <Text
                       css={{
                         color: "#363C9A",
-
                         fontStyle: "normal",
                         fontWeight: "700",
                         fontSize: "16px",
@@ -315,7 +314,7 @@ const EnergyEvolutionSection = () => {
                       fontStyle: "normal",
                       fontWeight: "400",
                       fontSize: "20px",
-                      lineHeight: "24px",
+                      lineHeight: 1.5,
                       mx: "$7",
                     }}
                   >

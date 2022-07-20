@@ -28,14 +28,22 @@ const UpcomingTrainingSection = () => {
       <Image
         src={imgBackground}
         objectFit="fill"
-        height="458px"
+        height="400px"
         containerCss={{
           width: "100%",
           borderRadius: "0",
         }}
         css={{ zIndex: "-1", opacity: 0.4 }}
       />
-      <Box css={{ position: "absolute", top: 0, width: '100%', px: '20px' }}>
+      <Box css={{
+          position: "absolute",
+          top: 0,
+          width: '100%',
+          px: '20px',
+          maxWidth: '1240px',
+          left: '50%',
+          transform: 'translateX(-50%)'
+      }}>
         {/* TITLE */}
         <Row justify="space-between" align="center" css={{pr: '50px'}}>
           <Row align="center" gap={4} css={{ my: "$6" }}>

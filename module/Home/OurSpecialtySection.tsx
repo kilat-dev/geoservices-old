@@ -20,22 +20,24 @@ const OurSpecialtySection = () => {
   return (
     <Container xl css={{ p: 0, overflow: "hidden" }}>
       {/* CARD TITLE */}
-      <Row align="center" gap={4} css={{ my: "$6" }}>
-        <Box
-          css={{ width: "56px", height: "3px", backgroundColor: "#363C9A" }}
-        />
-        <Text
-          css={{
-            fontStyle: "normal",
-            fontWeight: "300",
-            fontSize: "50px",
-            lineHeight: "61px",
-            color: "#BDBDBD",
-          }}
-        >
-          Our Specialties
-        </Text>
-      </Row>
+      <Container css={{ maxWidth: "1240px" }}>
+        <Row align="center" gap={4} css={{ my: "$6" }}>
+          <Box
+            css={{ width: "56px", height: "3px", backgroundColor: "#363C9A" }}
+          />
+          <Text
+            css={{
+              fontStyle: "normal",
+              fontWeight: "300",
+              fontSize: "50px",
+              lineHeight: "61px",
+              color: "#BDBDBD",
+            }}
+          >
+            Our Specialties
+          </Text>
+        </Row>
+      </Container>
 
       {/* CARD 1 */}
       <Row
@@ -60,6 +62,7 @@ const OurSpecialtySection = () => {
             height: "100%",
             display: "flex",
             flexDirection: "column",
+            backgroundColor: 'whitesmoke'
           }}
         >
           <Row align="center">
@@ -76,7 +79,6 @@ const OurSpecialtySection = () => {
               css={{
                 mx: "$7",
                 color: "#363C9A",
-
                 fontStyle: "normal",
                 fontWeight: "700",
                 fontSize: "16px",
@@ -93,11 +95,11 @@ const OurSpecialtySection = () => {
             <Text
               css={{
                 color: "#828282",
-
                 fontStyle: "normal",
                 fontWeight: "400",
                 fontSize: "20px",
-                lineHeight: "24px",
+                lineHeight: 1.5,
+                  maxWidth: '420px',
                 mx: "$7",
               }}
             >
@@ -124,6 +126,7 @@ const OurSpecialtySection = () => {
                   flexDirection: "row",
                   alignItems: "center",
                   p: "10px 10px 10px 10px",
+                    backgroundColor: 'whitesmoke'
                 }}
               >
                 <Text
@@ -158,6 +161,8 @@ const OurSpecialtySection = () => {
             height: "100%",
             display: "flex",
             flexDirection: "column",
+              backgroundColor: 'whitesmoke',
+              paddingLeft: '120px'
           }}
         >
           <Row align="center">
@@ -174,7 +179,6 @@ const OurSpecialtySection = () => {
               css={{
                 mx: "$7",
                 color: "#363C9A",
-
                 fontStyle: "normal",
                 fontWeight: "700",
                 fontSize: "16px",
@@ -191,11 +195,11 @@ const OurSpecialtySection = () => {
             <Text
               css={{
                 color: "#828282",
-
+                  maxWidth: '420px',
                 fontStyle: "normal",
                 fontWeight: "400",
                 fontSize: "20px",
-                lineHeight: "24px",
+                lineHeight: 1.5,
                 mx: "$7",
               }}
             >
@@ -222,6 +226,7 @@ const OurSpecialtySection = () => {
                   flexDirection: "row",
                   alignItems: "center",
                   p: "10px 10px 10px 10px",
+                    backgroundColor: 'whitesmoke'
                 }}
               >
                 <Text
@@ -274,6 +279,7 @@ const OurSpecialtySection = () => {
             height: "100%",
             display: "flex",
             flexDirection: "column",
+              backgroundColor: 'whitesmoke'
           }}
         >
           <Row align="center">
@@ -311,8 +317,9 @@ const OurSpecialtySection = () => {
                 fontStyle: "normal",
                 fontWeight: "400",
                 fontSize: "20px",
-                lineHeight: "24px",
+                lineHeight: 1.5,
                 mx: "$7",
+                  maxWidth: '420px'
               }}
             >
               Highly trained and experienced Indonesian staff perform all work
@@ -338,6 +345,7 @@ const OurSpecialtySection = () => {
                   flexDirection: "row",
                   alignItems: "center",
                   p: "10px 10px 10px 10px",
+                    backgroundColor: 'whitesmoke'
                 }}
               >
                 <Text
