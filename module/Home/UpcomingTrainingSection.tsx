@@ -28,16 +28,24 @@ const UpcomingTrainingSection = () => {
       <Image
         src={imgBackground}
         objectFit="fill"
-        height="458px"
+        height="400px"
         containerCss={{
           width: "100%",
           borderRadius: "0",
         }}
         css={{ zIndex: "-1", opacity: 0.4 }}
       />
-      <Container css={{ position: "absolute", top: 0 }}>
+      <Box css={{
+          position: "absolute",
+          top: 0,
+          width: '100%',
+          px: '20px',
+          maxWidth: '1240px',
+          left: '50%',
+          transform: 'translateX(-50%)'
+      }}>
         {/* TITLE */}
-        <Row justify="space-between" align="center">
+        <Row justify="space-between" align="center" css={{pr: '50px'}}>
           <Row align="center" gap={4} css={{ my: "$6" }}>
             <Box
               css={{ width: "56px", height: "3px", backgroundColor: "#F2F2F2" }}
@@ -79,8 +87,7 @@ const UpcomingTrainingSection = () => {
           </Card>
         </Row>
 
-        <Row
-          gap={2}
+        <Box
           css={{
             display: "grid",
             gridAutoColumns: "1fr",
@@ -90,7 +97,10 @@ const UpcomingTrainingSection = () => {
           {/* CARD 1 */}
           <Col
             css={{
+              px: "$5",
               height: "100%",
+              display: 'flex',
+              justifyContent: 'center'
             }}
           >
             <Card
@@ -100,6 +110,7 @@ const UpcomingTrainingSection = () => {
                 border: "1px white solid",
                 borderRadius: "10px",
                 p: "10px 10px 10px 20px",
+                maxWidth: '400px',
               }}
             >
               <Row css={{ pt: "$10" }}>
@@ -175,7 +186,10 @@ const UpcomingTrainingSection = () => {
           {/* CARD 2 */}
           <Col
             css={{
+              px: "$5",
               height: "100%",
+              display: 'flex',
+              justifyContent: 'center'
             }}
           >
             <Card
@@ -185,6 +199,7 @@ const UpcomingTrainingSection = () => {
                 border: "1px white solid",
                 borderRadius: "10px",
                 p: "10px 10px 10px 20px",
+                maxWidth: '400px'
               }}
             >
               <Row css={{ pt: "$10" }}>
@@ -260,7 +275,10 @@ const UpcomingTrainingSection = () => {
           {/* CARD 3 */}
           <Col
             css={{
+              px: "$5",
               height: "100%",
+              display: 'flex',
+              justifyContent: 'center'
             }}
           >
             <Card
@@ -270,6 +288,7 @@ const UpcomingTrainingSection = () => {
                 border: "1px white solid",
                 borderRadius: "10px",
                 p: "10px 10px 10px 20px",
+                maxWidth: '400px'
               }}
             >
               <Row css={{ pt: "$10" }}>
@@ -341,8 +360,8 @@ const UpcomingTrainingSection = () => {
               </Row>
             </Card>
           </Col>
-        </Row>
-      </Container>
+        </Box>
+      </Box>
     </Row>
   );
 };

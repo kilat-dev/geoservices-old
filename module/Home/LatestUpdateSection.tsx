@@ -7,7 +7,7 @@ import Box from "reusables/Box";
 const LatestUpdateSection = () => {
   return (
     <>
-      <Container css={{ my: "$20" }}>
+      <Box css={{ my: "$20", maxWidth: '1240px', margin: '80px auto' }}>
         {/* TITLE */}
         <Row align="center" gap={4} css={{ mb: "$6" }}>
           <Box
@@ -266,7 +266,7 @@ const LatestUpdateSection = () => {
             </Card>
           </Box>
         </Box>
-      </Container>
+      </Box>
     </>
   );
 };

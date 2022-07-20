@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Box from "reusables/Box";
-import { Popover } from "@nextui-org/react";
+import { Popover, styled } from "@nextui-org/react";
 import { NavMainMenuProps } from "reusables/types";
 
 export interface NavMenuProps {
@@ -43,20 +43,49 @@ export interface NavProps extends NavMenuProps {
   [x: string]: any;
 }
 
-export const Nav = ({ children, MainMenu, getSubMenu, ...rest }: NavProps) => {
+const Nav = ({ children, MainMenu, getSubMenu, ...rest }: NavProps) => {
+  const isHovered = useRef(false);
+  const [open, setOpen] = useState(false);
+
+  const handleMouseOver = () => {
+    isHovered.current = true;
+    setOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    isHovered.current = false;
+    setTimeout(() => {
+      if (!isHovered.current) {
+        setOpen(false);
+      }
+    }, 200);
+  };
+
   return (
-    <Popover {...rest} placement="bottom-right" disableAnimation offset={18}>
-      <Popover.Trigger>{children}</Popover.Trigger>
-      <Popover.Content
-        css={{
-          left: "0!important",
-          borderRadius: 0,
-          width: "100%",
-          maxWidth: "100%",
-        }}
+    <Box onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
+      <Popover
+        {...rest}
+        isOpen={open}
+        placement="bottom-right"
+        disableAnimation
+        offset={18}
       >
-        <NavMenu MainMenu={MainMenu} getSubMenu={getSubMenu} />
-      </Popover.Content>
-    </Popover>
+        <Popover.Trigger>{children}</Popover.Trigger>
+        <Popover.Content
+          css={{
+            left: "0!important",
+            borderRadius: 0,
+            width: "100%",
+            maxWidth: "100%",
+          }}
+        >
+          <NavMenu MainMenu={MainMenu} getSubMenu={getSubMenu} />
+        </Popover.Content>
+      </Popover>
+    </Box>
   );
 };
+
+const styledNav = styled(Nav);
+
+export { styledNav as Nav };

@@ -23,7 +23,7 @@ const OilAndGasLayout = ({
           text={text}
           objectPosition={jumbotronShift}
         />
-        <Container css={{ my: "10px" }}>
+        <Container css={{ my: "10px", maxWidth: '1240px' }}>
           <BreadCrumbLine items={breadcrumb} />
           {children}
         </Container>

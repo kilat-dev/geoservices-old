@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Button, Input, Text } from "@nextui-org/react";
+import { Row, Button, Input, Text, Link } from "@nextui-org/react";
 import { IoSearchOutline } from "react-icons/io5";
 import { ImCancelCircle } from "react-icons/im";
 import Image from "next/image";
@@ -8,6 +8,13 @@ import Dot from "reusables/Dot";
 import Box from "reusables/Box";
 import { Nav } from "reusables/NavMenu";
 import menu from "reusables/NavMenu/OilAndGasMenu";
+
+const headerTextCSS = {
+  fontSize: "10px",
+  "@sm": {
+    fontSize: "16px",
+  },
+};
 
 const Header = () => {
   const [isExpand, setExpand] = useState(false);
@@ -33,10 +40,13 @@ const Header = () => {
         <Box
           css={{
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: "end",
             alignItem: "center",
             position: "relative",
             height: "100%",
+            "@sm": {
+              justifyContent: "space-between",
+            },
           }}
         >
           <Box
@@ -74,22 +84,26 @@ const Header = () => {
             />
           </Box>
 
-          <Box
+          <Link
             css={{
               height: "100%",
-              display: "flex",
+              display: "none",
               alignItems: "center",
-              pl: "100px",
+              pl: "120px",
+              "@sm": {
+                display: "flex",
+              },
             }}
+            href={'/'}
           >
             <Image
               src={logo}
-              width="266px"
-              height="63px"
+              width="200px"
+              height="48px"
               alt="logo"
-              objectFit="initial"
+              objectFit="cover"
             />
-          </Box>
+          </Link>
 
           <Box
             css={{
@@ -101,36 +115,70 @@ const Header = () => {
           >
             <Box css={{ mr: "$5" }}>
               <Row justify="flex-end" align="center" gap={1}>
-                <TextLink fontSize="tiny" href="">
+                <TextLink css={headerTextCSS} href="">
                   Career
                 </TextLink>
                 <Dot />
-                <TextLink fontSize="tiny" href="">
+                <TextLink css={headerTextCSS} href="">
                   About Us
                 </TextLink>
                 <Dot />
-                <TextLink fontSize="tiny" href="">
+                <TextLink css={headerTextCSS} href="">
                   Contact
                 </TextLink>
               </Row>
-              <Row justify="flex-end" align="center" gap={1}>
+              <Row justify="flex-end" align="center" gap={1} css={{ my: "$2" }}>
                 <Nav {...menu}>
                   <Text
                     css={{
+                      ...headerTextCSS,
                       cursor: "pointer",
                       "&:hover": {
                         color: "$gray700",
                       },
+                      height: "100%",
                     }}
                   >
                     Oil and Gas
                   </Text>
                 </Nav>
 
-                {/* <TextLink href="">Oil and Gas</TextLink> */}
-                <TextLink href="">Coal and Minerals</TextLink>
-                <TextLink href="">Geothermal</TextLink>
-                <TextLink href="">Trade and Services</TextLink>
+                <Text
+                  css={{
+                    ...headerTextCSS,
+                    cursor: "pointer",
+                    "&:hover": {
+                      color: "$gray700",
+                    },
+                    height: "100%",
+                  }}
+                >
+                  Coal and Minerals
+                </Text>
+                <Text
+                  css={{
+                    ...headerTextCSS,
+                    cursor: "pointer",
+                    "&:hover": {
+                      color: "$gray700",
+                    },
+                    height: "100%",
+                  }}
+                >
+                  Geothermal
+                </Text>
+                <Text
+                  css={{
+                    ...headerTextCSS,
+                    cursor: "pointer",
+                    "&:hover": {
+                      color: "$gray700",
+                    },
+                    height: "100%",
+                  }}
+                >
+                  Trade and Services
+                </Text>
               </Row>
             </Box>
 
