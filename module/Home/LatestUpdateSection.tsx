@@ -19,7 +19,7 @@ const LatestUpdateSection = () => {
               fontWeight: "300",
               fontSize: "50px",
               lineHeight: "61px",
-              color: "#BDBDBD",
+              color: "#E68E67",
             }}
           >
             Latest Update

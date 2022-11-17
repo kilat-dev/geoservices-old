@@ -20,29 +20,24 @@ const UpcomingTrainingSection = () => {
       css={{
         width: "100%",
         position: "relative",
-        background:
-          "linear-gradient(75.36deg," +
-          "rgba(54, 60, 154, 0.9) 68.15%, rgba(54, 60, 154, 0) 100%)",
+        background: '#505AE5',
       }}
     >
-      <Image
-        src={imgBackground}
-        objectFit="fill"
-        height="400px"
-        containerCss={{
-          width: "100%",
-          borderRadius: "0",
-        }}
-        css={{ zIndex: "-1", opacity: 0.4 }}
-      />
+      {/*<Image*/}
+      {/*  src={imgBackground}*/}
+      {/*  objectFit="fill"*/}
+      {/*  height="400px"*/}
+      {/*  containerCss={{*/}
+      {/*    width: "100%",*/}
+      {/*    borderRadius: "0",*/}
+      {/*  }}*/}
+      {/*  css={{ zIndex: "-1", opacity: 0.4 }}*/}
+      {/*/>*/}
       <Box css={{
-          position: "absolute",
-          top: 0,
-          width: '100%',
-          px: '20px',
           maxWidth: '1240px',
-          left: '50%',
-          transform: 'translateX(-50%)'
+          margin: '0 auto',
+          paddingTop: 40,
+          paddingBottom: 80
       }}>
         {/* TITLE */}
         <Row justify="space-between" align="center" css={{pr: '50px'}}>
