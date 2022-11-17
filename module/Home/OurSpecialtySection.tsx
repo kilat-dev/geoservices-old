@@ -31,7 +31,7 @@ const OurSpecialtySection = () => {
               fontWeight: "300",
               fontSize: "50px",
               lineHeight: "61px",
-              color: "#BDBDBD",
+              color: "#E68E67",
             }}
           >
             Our Specialties
@@ -62,7 +62,7 @@ const OurSpecialtySection = () => {
             height: "100%",
             display: "flex",
             flexDirection: "column",
-            backgroundColor: 'whitesmoke'
+            backgroundColor: "whitesmoke",
           }}
         >
           <Row align="center">
@@ -84,6 +84,7 @@ const OurSpecialtySection = () => {
                 fontSize: "16px",
                 lineHeight: "19px",
                 letterSpacing: "0.01em",
+                marginTop: 20,
               }}
             >
               COAL LABORATORY
@@ -99,7 +100,7 @@ const OurSpecialtySection = () => {
                 fontWeight: "400",
                 fontSize: "20px",
                 lineHeight: 1.5,
-                  maxWidth: '420px',
+                maxWidth: "420px",
                 mx: "$7",
               }}
             >
@@ -126,7 +127,7 @@ const OurSpecialtySection = () => {
                   flexDirection: "row",
                   alignItems: "center",
                   p: "10px 10px 10px 10px",
-                    backgroundColor: 'whitesmoke'
+                  backgroundColor: "whitesmoke",
                 }}
               >
                 <Text
@@ -161,8 +162,8 @@ const OurSpecialtySection = () => {
             height: "100%",
             display: "flex",
             flexDirection: "column",
-              backgroundColor: 'whitesmoke',
-              paddingLeft: '120px'
+            backgroundColor: "whitesmoke",
+            paddingLeft: "120px",
           }}
         >
           <Row align="center">
@@ -184,6 +185,7 @@ const OurSpecialtySection = () => {
                 fontSize: "16px",
                 lineHeight: "19px",
                 letterSpacing: "0.01em",
+                marginTop: 20,
               }}
             >
               MINERAL LABORATORY
@@ -195,7 +197,7 @@ const OurSpecialtySection = () => {
             <Text
               css={{
                 color: "#828282",
-                  maxWidth: '420px',
+                maxWidth: "420px",
                 fontStyle: "normal",
                 fontWeight: "400",
                 fontSize: "20px",
@@ -226,7 +228,7 @@ const OurSpecialtySection = () => {
                   flexDirection: "row",
                   alignItems: "center",
                   p: "10px 10px 10px 10px",
-                    backgroundColor: 'whitesmoke'
+                  backgroundColor: "whitesmoke",
                 }}
               >
                 <Text
@@ -279,7 +281,7 @@ const OurSpecialtySection = () => {
             height: "100%",
             display: "flex",
             flexDirection: "column",
-              backgroundColor: 'whitesmoke'
+            backgroundColor: "whitesmoke",
           }}
         >
           <Row align="center">
@@ -302,6 +304,7 @@ const OurSpecialtySection = () => {
                 fontSize: "16px",
                 lineHeight: "19px",
                 letterSpacing: "0.01em",
+                marginTop: 20,
               }}
             >
               GEOTHERMAL
@@ -319,7 +322,7 @@ const OurSpecialtySection = () => {
                 fontSize: "20px",
                 lineHeight: 1.5,
                 mx: "$7",
-                  maxWidth: '420px'
+                maxWidth: "420px",
               }}
             >
               Highly trained and experienced Indonesian staff perform all work
@@ -345,7 +348,7 @@ const OurSpecialtySection = () => {
                   flexDirection: "row",
                   alignItems: "center",
                   p: "10px 10px 10px 10px",
-                    backgroundColor: 'whitesmoke'
+                  backgroundColor: "whitesmoke",
                 }}
               >
                 <Text

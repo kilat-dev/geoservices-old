@@ -19,7 +19,7 @@ const EnergyEvolutionSection = () => {
 
   return (
     <>
-      <Box css={{ position: "relative", background: "$black" }}>
+      <Box css={{ position: "relative", background: "black" }}>
         <Image
           src={imgBackground}
           objectFit="cover"
@@ -28,7 +28,7 @@ const EnergyEvolutionSection = () => {
             width: "100%",
             borderRadius: "0",
           }}
-          css={{ zIndex: "-1", opacity: 0.4 }}
+          css={{ zIndex: "-1", opacity: 1 }}
         />
         <Container
           css={{
@@ -42,94 +42,57 @@ const EnergyEvolutionSection = () => {
               position: "relative",
               paddingTop: "120px",
               left: "5%",
-              display: "grid",
+              display: "block",
               gridAutoRows: "1fr",
-              gridTemplateColumns: "400px 1fr",
-              overflowWrap: 'break-word'
+              overflowWrap: "break-word",
             }}
             gap={2}
           >
-            {/* left side */}
-            <Col>
-              <Text
-                css={{
-                  fontSize: "60px",
-                  fontWeight: "800",
-                  lineHeight: "76px",
-                  letterSpacing: "0em",
-                  textAlign: "left",
-                  color: "$white",
-                    marginTop: "7px"
-                }}
-              >
-                The Energy Evolution
-              </Text>
-
-              <Spacer y={1} />
-              <Box css={{ height: "3px", backgroundColor: "#D3252C" }} />
-            </Col>
-
-            {/* right side */}
-            <Col
+            <Text
               css={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                paddingTop: "25px",
-                height: "100%",
-                maxWidth: "564px",
+                fontSize: "60px",
+                fontWeight: "800",
+                lineHeight: "76px",
+                letterSpacing: "0em",
+                textAlign: "left",
+                color: "$black",
+                marginTop: "7px",
               }}
             >
-              <Text
-                css={{
-                  fontStyle: "normal",
-                  fontWeight: "400",
-                  fontSize: "18px",
-                  lineHeight: 1.5,
-                  color: "#FFFFFF",
-                }}
-              >
-                We have a solid base of expertise covering all aspects of the
-                exploration and development of Indonesia’s oil, gas, coal,
-                mineral, and geothermal industries.
-              </Text>
-
-              <Card
-                isPressable
-                css={{
-                  width: "fit-content",
-                }}
-              >
-                <Box
-                  css={{
-                    width: "fit-content",
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    p: "10px 10px 10px 10px",
-                  }}
-                >
-                  <Text
-                    css={{
-                        mr: "$10",
-                        fontStyle: "normal",
-                        fontWeight: "700",
-                        fontSize: "16px",
-                        lineHeight: "20px",
-                        padding: "5px 12px"
-                    }}
-                  >
-                    View More
-                  </Text>
-                  <BsArrowRight color="#EC1C24" />
-                </Box>
-              </Card>
-            </Col>
+              The Energy Evolution
+            </Text>
+          </Row>
+          <Row
+            css={{
+                paddingTop: 20,
+                position: "relative",
+                left: "5%",
+                display: "block",
+                width: 600,
+                overflowWrap: "break-word",
+            }}
+            gap={2}
+          >
+            <Text
+              css={{
+                fontStyle: "normal",
+                fontWeight: "400",
+                fontSize: "18px",
+                lineHeight: 1.5,
+                color: "$black",
+              }}
+            >
+              We have a solid base of expertise covering all aspects of the
+              exploration and development of Indonesia’s oil, gas, coal,
+              mineral, and geothermal industries.
+            </Text>
           </Row>
         </Container>
       </Box>
 
-      <Container css={{ top: "-150px", position: "relative", maxWidth: '1240px' }}>
+      <Container
+        css={{ top: "-150px", position: "relative", maxWidth: "1240px" }}
+      >
         <Row
           css={{
             display: "grid",
@@ -154,14 +117,14 @@ const EnergyEvolutionSection = () => {
                       width={109}
                       height={98}
                       src={imgSearch}
-                      containerCss={{ m: 0, marginTop: '20px' }}
+                      containerCss={{ m: 0, marginTop: "20px" }}
                     />
                   </Col>
                   <Col>
                     <Text
                       css={{
                         color: "#363C9A",
-
+                        marginTop: 20,
                         fontStyle: "normal",
                         fontWeight: "700",
                         fontSize: "16px",
@@ -177,7 +140,6 @@ const EnergyEvolutionSection = () => {
                   <Text
                     css={{
                       color: "#828282",
-
                       fontStyle: "normal",
                       fontWeight: "400",
                       fontSize: "20px",
@@ -222,14 +184,14 @@ const EnergyEvolutionSection = () => {
                       width={109}
                       height={98}
                       src={imgCart}
-                      containerCss={{ m: 0, marginTop: '20px' }}
+                      containerCss={{ m: 0, marginTop: "20px" }}
                     />
                   </Col>
                   <Col>
                     <Text
                       css={{
                         color: "#363C9A",
-
+                        marginTop: 20,
                         fontStyle: "normal",
                         fontWeight: "700",
                         fontSize: "16px",
@@ -288,13 +250,14 @@ const EnergyEvolutionSection = () => {
                       width={109}
                       height={98}
                       src={imgResearch}
-                      containerCss={{ m: 0, marginTop: '20px' }}
+                      containerCss={{ m: 0, marginTop: "20px" }}
                     />
                   </Col>
                   <Col>
                     <Text
                       css={{
                         color: "#363C9A",
+                        marginTop: 20,
                         fontStyle: "normal",
                         fontWeight: "700",
                         fontSize: "16px",
