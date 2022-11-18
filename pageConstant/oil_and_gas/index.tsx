@@ -4,6 +4,7 @@ import { default as ROCK_DESCRIPTION } from "./rock_description";
 import { default as STRATIGRAPGIC_SERVICES } from "./stratigraphic_services";
 import { default as PVT } from "./pvt";
 import { default as SOFTWARE } from "./software";
+import { default as GEOLAB } from "./geolab";
 import { generateBreadcrumb } from "reusables/utilities";
 
 export { default as CORE_ANALYSIS } from "./core_analysis";
@@ -39,4 +40,5 @@ export default {
   STRATIGRAPGIC_SERVICES,
   PVT,
   SOFTWARE,
+  GEOLAB,
 };
