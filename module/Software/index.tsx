@@ -5,15 +5,15 @@ import TextLink from "reusables/TextLink";
 import { companies, composeEmailLink, products } from "./constants";
 import Slider from "react-slick";
 
-const openLightbox = (setLightBoxStatus, setContent, image, email) => () => {
+const openLightbox = (setLightBoxStatus: Function, setContent: Function, image: string, email?: any) => () => {
     setContent({
         image,
-        email
+        email: email ? email : {}
     });
     setLightBoxStatus(true);
 };
 
-const closeLightbox = (setLightBoxStatus) => () => {
+const closeLightbox = (setLightBoxStatus: Function) => () => {
     setLightBoxStatus(false);
 };
 
@@ -72,7 +72,11 @@ const renderLightbox = (
               <br />
               Neuralog also has direct representatives in North and South America and Europe. Neuralog products are used in Schlumberger/GeoQuest data conversion service centers worldwide and can be found in over 70 countries.
           </div>
-          <a href={content.email ? composeEmailLink(content.email) : composeEmailLink('quotation@geoservices.com')} style={{
+          <a href={content.email ? composeEmailLink(content.email) : composeEmailLink({
+              to: 'quotation@geoservices.com',
+              subject: '',
+              body: ''
+          })} style={{
               color: 'white',
               backgroundColor: '#363C9A',
               border: 'none',

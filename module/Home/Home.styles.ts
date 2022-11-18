@@ -1,7 +1,6 @@
 export const styles = {
   sectionRow: {
     display: "flex",
-    flexDirection: "row",
   },
   sectionRowReverse: {
     display: "flex",
