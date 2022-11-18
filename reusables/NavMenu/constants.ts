@@ -8,59 +8,67 @@ export const options = [
     label: "Exploration",
   },
   {
+    name: "laboratory",
+    label: "Lab",
+  },
+  {
     name: "software",
     label: "Software",
     url: PAGES.SOFTWARE.url
-  },
-  {
-    name: "training",
-    label: "Training",
   },
   {
     name: "wellAndServices",
     label: "Well and Services",
   },
   {
-    name: "laboratory",
-    label: "Laboratory",
+    name: "training",
+    label: "Training",
+  },
+];
+
+export const laboratoryOptions = [
+  {
+    name: "topographicalServices",
+    label: "Geolab",
+    href: PAGES.CORE_ANALYSIS.url,
+  },
+  {
+    name: "geologicalServices",
+    label: "Microbiology analysis",
+    href: PAGES.PVT.url,
+  },
+  {
+    name: "geophysicalServices",
+    label: "Lab. of Gas Analysis",
+    href: PAGES.GFE.url,
   },
 ];
 
 export const explorationOptions = [
   {
-    name: "coreAnalysis",
-    label: "Core Analysis",
+    name: "topographicalServices",
+    label: "Topographical Services",
     href: PAGES.CORE_ANALYSIS.url,
   },
   {
-    name: "pvt",
-    label: "PVT Analysis",
+    name: "geologicalServices",
+    label: "Geological Services",
     href: PAGES.PVT.url,
   },
   {
-    name: "geochemistry",
-    label: "Geochemistry",
+    name: "geophysicalServices",
+    label: "Geophysical Services",
     href: PAGES.GFE.url,
   },
   {
-    name: "petroleumChemistry",
-    label: "Petroleum Chemistry and Corrosion",
+    name: "geophysicalLoggingServices",
+    label: "Geophysical Logging Services",
     href: "#", // stubs
   },
   {
-    name: "rockDescription",
-    label: "Rock Description",
+    name: "coalBedMethane",
+    label: "Coal Bed Methane",
     href: PAGES.ROCK_DESCRIPTION.url,
-  },
-  {
-    name: "microbiologyAnalysis",
-    label: "Microbiology Analysis",
-    href: "#", // stubs
-  },
-  {
-    name: "stratigraphicServices",
-    label: "Stratigraphic Services",
-    href: PAGES.STRATIGRAPGIC_SERVICES.url,
   },
 ];
 

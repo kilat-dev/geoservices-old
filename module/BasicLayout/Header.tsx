@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Row, Button, Input, Text, Link } from "@nextui-org/react";
+import { useRouter } from "next/router";
 import { IoSearchOutline } from "react-icons/io5";
 import { ImCancelCircle } from "react-icons/im";
 import Image from "next/image";
@@ -10,16 +11,33 @@ import { Nav } from "reusables/NavMenu";
 import menu from "reusables/NavMenu/OilAndGasMenu";
 
 const headerTextCSS = {
-  fontSize: "10px",
+  paddingTop: 10,
+  fontSize: "7px",
   "@sm": {
     fontSize: "16px",
   },
+};
+
+const mainMenu = {
+  fontSize: "10px",
+  position: "relative",
+  top: 10,
+  marginTop: -8,
+  paddingTop: 0,
+  paddingBottom: 20,
+  paddingLeft: 12,
+  paddingRight: 12,
+  // borderBottom: '4px solid rgb(211, 37, 44)',
+  borderBottom: "4px solid transparent",
 };
 
 const Header = () => {
   const [isExpand, setExpand] = useState(false);
   const [searchKey, setSearchKey] = useState("");
   const logo = "/assets/logo2.png";
+
+  const router = useRouter();
+  console.log(router.pathname);
 
   return (
     <Box css={{ minHeight: "80px" }}>
@@ -94,14 +112,15 @@ const Header = () => {
                 display: "flex",
               },
             }}
-            href={'/'}
+            href={"/"}
           >
             <Image
               src={logo}
               width="200px"
-              height="48px"
+              height="60px"
               alt="logo"
-              objectFit="cover"
+              objectFit="contain"
+              style={{ marginTop: "-1.5px" }}
             />
           </Link>
 
@@ -132,11 +151,18 @@ const Header = () => {
                   <Text
                     css={{
                       ...headerTextCSS,
+                      ...mainMenu,
                       cursor: "pointer",
                       "&:hover": {
                         color: "$gray700",
                       },
+                      top: 8,
                       height: "100%",
+                    }}
+                    style={{
+                      borderColor: router.pathname.includes("oil_and_gas")
+                        ? "#D3252C"
+                        : "transparent",
                     }}
                   >
                     Oil and Gas
@@ -146,6 +172,7 @@ const Header = () => {
                 <Text
                   css={{
                     ...headerTextCSS,
+                    ...mainMenu,
                     cursor: "pointer",
                     "&:hover": {
                       color: "$gray700",
@@ -158,6 +185,7 @@ const Header = () => {
                 <Text
                   css={{
                     ...headerTextCSS,
+                    ...mainMenu,
                     cursor: "pointer",
                     "&:hover": {
                       color: "$gray700",
@@ -170,6 +198,7 @@ const Header = () => {
                 <Text
                   css={{
                     ...headerTextCSS,
+                    ...mainMenu,
                     cursor: "pointer",
                     "&:hover": {
                       color: "$gray700",

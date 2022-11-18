@@ -1,6 +1,11 @@
 import { BasePage } from "module/BasePage";
 import React from "react";
+
+// Import css files
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "../styles/globals.css";
+
 import { MyAppProps } from "../module/types";
 
 /**

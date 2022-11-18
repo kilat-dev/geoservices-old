@@ -37,7 +37,7 @@ const ImageJumbotron = ({
           top: "40%",
           left: "140px",
           color: "$white",
-          fontFamily: "Plus Jakarta Sans",
+          // fontFamily: "Plus Jakarta Sans",
           fontStyle: "normal",
           fontWeight: "800",
           fontSize: "60px",

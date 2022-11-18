@@ -64,12 +64,12 @@ const EnergyEvolutionSection = () => {
           </Row>
           <Row
             css={{
-                paddingTop: 20,
-                position: "relative",
-                left: "5%",
-                display: "block",
-                width: 600,
-                overflowWrap: "break-word",
+              paddingTop: 20,
+              position: "relative",
+              left: "5%",
+              display: "block",
+              width: 600,
+              overflowWrap: "break-word",
             }}
             gap={2}
           >
@@ -78,7 +78,7 @@ const EnergyEvolutionSection = () => {
                 fontStyle: "normal",
                 fontWeight: "400",
                 fontSize: "18px",
-                lineHeight: 1.5,
+                lineHeight: 1.8,
                 color: "$black",
               }}
             >

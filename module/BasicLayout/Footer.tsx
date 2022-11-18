@@ -29,9 +29,9 @@ const Footer = () => {
         <Image
           src={logo}
           width="200px"
-          height="48px"
+          height="60px"
           alt="logo"
-          objectFit="cover"
+          objectFit="contain"
         />
         <Text
           css={{
