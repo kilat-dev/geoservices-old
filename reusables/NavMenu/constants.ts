@@ -30,7 +30,7 @@ export const laboratoryOptions = [
   {
     name: "topographicalServices",
     label: "Geolab",
-    href: PAGES.CORE_ANALYSIS.url,
+    href: PAGES.GEOLAB.url,
   },
   {
     name: "geologicalServices",
