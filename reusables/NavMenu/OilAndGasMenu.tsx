@@ -9,6 +9,7 @@ import {
   defaultColor,
   options,
   explorationOptions,
+  laboratoryOptions,
   softwareOptions,
 } from "./constants";
 
@@ -221,7 +222,7 @@ export const ExplorationSubMenu = () => {
                 textCSS={{
                   fontStyle: "normal",
                   fontWeight: "400",
-                  fontSize: "18px",
+                  fontSize: "15px",
                   lineHeight: "22px",
                 }}
                 href={option.href}
@@ -235,7 +236,7 @@ export const ExplorationSubMenu = () => {
           <Image
             src={image1}
             objectFit="fill"
-            height={250}
+            height={200}
             containerCss={{
               borderRadius: "0",
             }}
@@ -246,87 +247,268 @@ export const ExplorationSubMenu = () => {
   );
 };
 
-export const SoftwareSubMenu = () => {
-  const image1 = "/assets/bg-machinery.png";
+export const LaboratorySubMenu = () => {
+    const image1 = "/assets/bg-machinery.png";
 
-  return (
-    <>
-      <Box
-        css={{
-          margin: "10px 10px 15px 10px",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <Link
-          css={{
-            fontStyle: "normal",
-            fontWeight: "700",
-            fontSize: "18px",
-            lineHeight: "22px",
-              color: 'black',
-              padding: '20px',
-          }}
-          href={'/oil_and_gas/software'}
-        >
-          Software
-        </Link>
-      </Box>
-
-      <Box css={{ display: "flex" }}>
-        <Box
-          css={{
-            width: "70%",
-            display: "grid",
-            gridAutoRows: "min-content",
-            gridTemplateColumns: "1fr 1fr",
-          }}
-        >
-          {softwareOptions?.map((option) => (
+    return (
+        <>
             <Box
-              key={option?.name}
-              css={{
-                mx: "10px",
-                mb: "15px",
-              }}
-            >
-              <TextLink
-                textCSS={{
-                  fontStyle: "normal",
-                  fontWeight: "400",
-                  fontSize: "18px",
-                  lineHeight: "22px",
+                css={{
+                    margin: "10px 10px 15px 10px",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
                 }}
-                href={option.href}
-              >
-                {option.label}
-              </TextLink>
+            >
+                <Text
+                    css={{
+                        fontStyle: "normal",
+                        fontWeight: "700",
+                        fontSize: "18px",
+                        lineHeight: "22px",
+                    }}
+                >
+                    Lab
+                </Text>
             </Box>
-          ))}
-        </Box>
-        <Box css={{ mx: "$14" }}>
-          <Image
-            src={image1}
-            objectFit="fill"
-            height={250}
-            containerCss={{
-              borderRadius: "0",
+
+            <Box css={{ display: "flex" }}>
+                <Box
+                    css={{
+                        width: "70%",
+                        display: "grid",
+                        gridAutoRows: "min-content",
+                        gridTemplateColumns: "1fr 1fr",
+                    }}
+                >
+                    {laboratoryOptions?.map((option) => (
+                        <Box
+                            key={option?.name}
+                            css={{
+                                mx: "10px",
+                                mb: "15px",
+                            }}
+                        >
+                            <TextLink
+                                textCSS={{
+                                    fontStyle: "normal",
+                                    fontWeight: "400",
+                                    fontSize: "15px",
+                                    lineHeight: "22px",
+                                }}
+                                href={option.href}
+                            >
+                                {option.label}
+                            </TextLink>
+                        </Box>
+                    ))}
+                </Box>
+                <Box css={{ mx: "$14" }}>
+                    <Image
+                        src={image1}
+                        objectFit="fill"
+                        height={200}
+                        containerCss={{
+                            borderRadius: "0",
+                        }}
+                    />
+                </Box>
+            </Box>
+        </>
+    );
+};
+
+// export const SoftwareSubMenu = () => {
+//   const image1 = "/assets/bg-machinery.png";
+//
+//   return (
+//     <>
+//       <Box
+//         css={{
+//           margin: "10px 10px 15px 10px",
+//           display: "flex",
+//           justifyContent: "space-between",
+//           alignItems: "center",
+//         }}
+//       >
+//         <Link
+//           css={{
+//             fontStyle: "normal",
+//             fontWeight: "700",
+//             fontSize: "18px",
+//             lineHeight: "22px",
+//               color: 'black',
+//               padding: '20px',
+//           }}
+//           href={'/oil_and_gas/software'}
+//         >
+//           Software
+//         </Link>
+//       </Box>
+//
+//       <Box css={{ display: "flex" }}>
+//         <Box
+//           css={{
+//             width: "70%",
+//             display: "grid",
+//             gridAutoRows: "min-content",
+//             gridTemplateColumns: "1fr 1fr",
+//           }}
+//         >
+//           {softwareOptions?.map((option) => (
+//             <Box
+//               key={option?.name}
+//               css={{
+//                 mx: "10px",
+//                 mb: "15px",
+//               }}
+//             >
+//               <TextLink
+//                 textCSS={{
+//                   fontStyle: "normal",
+//                   fontWeight: "400",
+//                   fontSize: "18px",
+//                   lineHeight: "22px",
+//                 }}
+//                 href={option.href}
+//               >
+//                 {option.label}
+//               </TextLink>
+//             </Box>
+//           ))}
+//         </Box>
+//         <Box css={{ mx: "$14" }}>
+//           <Image
+//             src={image1}
+//             objectFit="fill"
+//             height={250}
+//             containerCss={{
+//               borderRadius: "0",
+//             }}
+//           />
+//         </Box>
+//       </Box>
+//     </>
+//   );
+// };
+
+export const SoftwareSubMenu = () => {
+    const image1 = "/assets/logo-paradigm.png";
+    const image2 = "/assets/logo-petrosys.png";
+    const image3 = "/assets/logo-kappa.png";
+
+    return (
+        <Box
+            css={{
+                display: "grid",
+                gridAutoRows: "1fr",
+                gridTemplateColumns: "1fr 1fr 1fr",
             }}
-          />
+        >
+            <Box css={{ mx: "20px" }}>
+                <Image
+                    src={image1}
+                    objectFit="cover"
+                    height={200}
+                    containerCss={{
+                        borderRadius: "0",
+                        marginTop: 40
+                    }}
+                />
+                <Box
+                    css={{
+                        marginTop: "10px",
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                    }}
+                >
+                    <Text
+                        css={{
+                            fontStyle: "normal",
+                            fontWeight: "400",
+                            fontSize: "15px",
+                            lineHeight: "22px",
+                        }}
+                    >
+                        Paradigm
+                    </Text>
+                    <BsArrowRight color="#EC1C24" />
+                </Box>
+            </Box>
+            <Box css={{ mx: "20px" }}>
+                <Image
+                    src={image2}
+                    objectFit="contain"
+                    height={200}
+                    containerCss={{
+                        borderRadius: "0",
+                        marginTop: 40
+                    }}
+                />
+                <Box
+                    css={{
+                        marginTop: "10px",
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                    }}
+                >
+                    <Text
+                        css={{
+                            fontStyle: "normal",
+                            fontWeight: "400",
+                            fontSize: "15px",
+                            lineHeight: "22px",
+                        }}
+                    >
+                        Petrosys Data Management
+                    </Text>
+                    <BsArrowRight color="#EC1C24" />
+                </Box>
+            </Box>
+            <Box css={{ mx: "20px" }}>
+                <Image
+                    src={image3}
+                    objectFit="contain"
+                    height={200}
+                    containerCss={{
+                        borderRadius: "0",
+                        marginTop: 40
+                    }}
+                />
+                <Box
+                    css={{
+                        marginTop: "10px",
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                    }}
+                >
+                    <Text
+                        css={{
+                            fontStyle: "normal",
+                            fontWeight: "400",
+                            fontSize: "15px",
+                            lineHeight: "22px",
+                        }}
+                    >
+                        Kappa
+                    </Text>
+                    <BsArrowRight color="#EC1C24" />
+                </Box>
+            </Box>
         </Box>
-      </Box>
-    </>
-  );
+    );
 };
 
 const subMenu: { [x: string]: () => JSX.Element } = {
   default: DefaultSubMenu,
   exploration: ExplorationSubMenu,
+  laboratory: LaboratorySubMenu,
   software: SoftwareSubMenu,
   training: () => <>training</>,
   wellAndServices: () => <>wellAndServices</>,
-  laboratory: () => <>laboratory</>,
 };
 
 export const getSubMenu = (selected: string) => {
