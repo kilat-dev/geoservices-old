@@ -9,7 +9,7 @@ SoftwarePage.layout = OilAndGasLayout;
 SoftwarePage.title = PAGE.title;
 
 export const getStaticProps = async () => {
-  const imgBackground = "/assets/bg-graph.png";
+  const imgBackground = "/assets/bg-software.png";
 
   return {
     props: {

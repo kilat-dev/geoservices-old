@@ -73,6 +73,7 @@ const Nav = ({ children, MainMenu, getSubMenu, ...rest }: NavProps) => {
         <Popover.Trigger>{children}</Popover.Trigger>
         <Popover.Content
           css={{
+            marginTop: -18,
             left: "0!important",
             borderRadius: 0,
             width: "100%",
