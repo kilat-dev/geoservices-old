@@ -14,7 +14,7 @@ const thisBreadcrumb = [
 ];
 
 const breadcrumb: BreadcrumbMapProps = {
-  Home: thisBreadcrumb,
+  // HOME,
   ...generateBreadcrumb(OIL_AND_GAS.breadcrumb, thisBreadcrumb),
 };
 
