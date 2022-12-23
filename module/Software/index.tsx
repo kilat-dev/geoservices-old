@@ -175,9 +175,9 @@ const Software = () => {
                   }}
               >
                   <Slider {...settings}>
-                      {products?.map((item) => (
-                          <div onClick={openLightbox(setLightBoxStatus, setContent, item.logo)}>
-                              <Image src={item?.logo}/>
+                      {products?.map((item, index) => (
+                          <div onClick={openLightbox(setLightBoxStatus, setContent, item.logo, item.desc)} style={{ overflow: 'hidden' }}>
+                              <Image src={item?.logo} style={{ height: 160, objectFit: 'cover', marginLeft: index > 0 ? 20 : 0 }}/>
                               <div style={{
                                   marginTop: '10px',
                                   textAlign: 'center'
@@ -224,12 +224,16 @@ const Software = () => {
                                   }}
                               >
                                   <Box css={{ display: "flex", alignItems: "center" }}>
-                                      <Image src={item?.logo} />
+                                      <Image src={item?.logo} style={{ height: 120 }} />
                                   </Box>
                                   <div style={{
                                       textAlign: 'center',
                                       marginTop: 20,
-                                      marginBottom: 40
+                                      marginBottom: 40,
+                                      lineHeight: 1.5,
+                                      fontSize: 15,
+                                      paddingLeft: 10,
+                                      paddingRight: 10
                                   }}>
                                       {item.desc}
                                   </div>
@@ -299,7 +303,7 @@ const Software = () => {
                                   }}
                               >
                                   <Box css={{ display: "flex", alignItems: "center" }}>
-                                      <Image src={item?.logo} />
+                                      <Image src={item?.logo} style={{ height: 200 }}/>
                                   </Box>
                                   <Box
                                       css={{
