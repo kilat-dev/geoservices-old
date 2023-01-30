@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "softwares",
+  "info": {
+    "singularName": "software",
+    "pluralName": "softwares",
+    "displayName": "Software",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "principal": {
+      "type": "enumeration",
+      "enum": [
+        "Eliis",
+        "Petrosys",
+        "Etech",
+        "Tecplot",
+        "AspenTech",
+        "Neuralog",
+        "Kappa",
+        "Ikon Science"
+      ]
+    },
+    "location": {
+      "type": "string"
+    }
+  }
+}

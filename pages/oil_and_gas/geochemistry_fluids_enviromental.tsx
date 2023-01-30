@@ -13,7 +13,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      text: "Geochemistry, Fluids & Environmetal",
+      text: "Geochemistry, Fluid & Environmetal",
       backgroundImage: imgBackground,
       breadcrumb: getBreadcrumb(PAGE.title),
     },

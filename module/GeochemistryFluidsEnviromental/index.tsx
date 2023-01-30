@@ -55,7 +55,7 @@ const GeochemistryFluidsEnviromental = () => {
             my: "$10",
           }}
         >
-          Geochemistry, Fluids & Environmetal{" "}
+          Geochemistry, Fluid & Environmetal{" "}
         </Text>
         <Text
           css={{

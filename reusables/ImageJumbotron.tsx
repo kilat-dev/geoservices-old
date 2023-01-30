@@ -17,6 +17,16 @@ const ImageJumbotron = ({
 }: ImageJumbotronProps) => {
   return (
     <Box css={{ width: "100%", position: "relative" }}>
+        <img
+            src={"http://localhost:1337" + '/uploads/overlay_d705da266e.png'}
+            style={{
+                width: '100%',
+                height: 390,
+                position: 'absolute',
+                zIndex: 1,
+                objectFit: 'cover'
+            }}
+        />
       <Image
         src={imageSrc}
         objectFit="cover"
@@ -44,6 +54,7 @@ const ImageJumbotron = ({
           lineHeight: "76px",
           width: "80%",
           textTransform: "uppercase",
+            zIndex: 2
         }}
       >
         {text}

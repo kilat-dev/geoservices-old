@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "geolabs",
+  "info": {
+    "singularName": "geolab",
+    "pluralName": "geolabs",
+    "displayName": "Geolab",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Laboratory": {
+      "type": "string"
+    },
+    "Location": {
+      "type": "string"
+    },
+    "Images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Banner": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Industry": {
+      "type": "string"
+    },
+    "products": {
+      "type": "dynamiczone",
+      "components": [
+        "service.product"
+      ]
+    },
+    "Description": {
+      "type": "richtext"
+    }
+  }
+}
