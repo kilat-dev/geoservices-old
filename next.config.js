@@ -13,6 +13,7 @@ const nextConfig = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
+  pageExtensions: [".tsx"],
 };
 
 module.exports = nextConfig;
