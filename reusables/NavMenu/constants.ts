@@ -1,4 +1,4 @@
-import PAGES from "pageConstant/oil_and_gas";
+import PAGES, {CORE_ANALYSIS, ROCK_DESCRIPTION, STRATIGRAPGIC_SERVICES} from "pageConstant/oil_and_gas";
 
 export const selectedColor = "#D3252C";
 export const defaultColor = "#000000";
@@ -9,7 +9,7 @@ export const options = [
   },
   {
     name: "laboratory",
-    label: "Lab",
+    label: "Geolab",
   },
   {
     name: "software",
@@ -28,19 +28,34 @@ export const options = [
 
 export const laboratoryOptions = [
   {
-    name: "topographicalServices",
-    label: "Geolab",
-    href: PAGES.GEOLAB.url,
+    name: "rockDescription",
+    label: "Stratigraphic Analysis",
+    href: '/oil_and_gas/geolab/0',
   },
   {
-    name: "geologicalServices",
-    label: "Microbiology analysis",
-    href: PAGES.PVT.url,
+    name: "coreAnalysis",
+    label: "Geochemistry Analysis",
+    href: '/oil_and_gas/geolab/1',
   },
   {
-    name: "geophysicalServices",
-    label: "Lab. of Gas Analysis",
-    href: PAGES.GFE.url,
+    name: "rockDescription",
+    label: "PVT Analysis",
+    href: '/oil_and_gas/geolab/2',
+  },
+  {
+    name: "coreAnalysis",
+    label: "Sedimentology & Petography Analysis",
+    href: '/oil_and_gas/geolab/3',
+  },
+  {
+    name: "rockDescription",
+    label: "Core Analysis",
+    href: '/oil_and_gas/geolab/4',
+  },
+  {
+    name: "coreAnalysis",
+    label: "Production Chemistry Analysis",
+    href: '/oil_and_gas/geolab/5',
   },
 ];
 

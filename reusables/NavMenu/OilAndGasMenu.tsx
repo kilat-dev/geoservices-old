@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Box from "reusables/Box";
 import { Image, Text, Link } from "@nextui-org/react";
 import { BsArrowRight } from "react-icons/bs";
@@ -249,6 +249,34 @@ export const ExplorationSubMenu = () => {
 
 export const LaboratorySubMenu = () => {
     const image1 = "/assets/bg-machinery.png";
+    const [product, setProductData] = useState([]);
+
+    const apiToken =
+        "2ec67e19c8e68e464b98e935cbc43d59ea77c11d983120eb3d234d097cd7aff18771692acaa390be0f09bae1a134c6205553c888c90a3a69687edc730d9e92106283f875b54b9530a41124eec5e7fa6410ba4685b12d5b879f2de1f4c87b280d1cf9f979b3b87a7f76fb8bed79acf4d8bf3ec2546666b60cd5c8c44619a79ad4";
+    const callAPI = async (setProductData) => {
+        try {
+            const res = await fetch(`http://localhost:1337/api/geolabs?populate=deep`, {
+                headers: {
+                    Authorization: `Bearer ${apiToken}`,
+                },
+            });
+            const data = await res.json();
+            const mappedData = data.data.map((item, index) => {
+                return ({
+                    label: item.attributes.Laboratory,
+                    name: item.attributes.Laboratory,
+                    href: `/oil_and_gas/geolab/${index}`
+                })
+            });
+            setProductData(mappedData);
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
+    useEffect(() => {
+        callAPI(setProductData);
+    }, [product]);
 
     return (
         <>
@@ -268,7 +296,7 @@ export const LaboratorySubMenu = () => {
                         lineHeight: "22px",
                     }}
                 >
-                    Lab
+                    Geolab
                 </Text>
             </Box>
 
@@ -281,7 +309,7 @@ export const LaboratorySubMenu = () => {
                         gridTemplateColumns: "1fr 1fr",
                     }}
                 >
-                    {laboratoryOptions?.map((option) => (
+                    {product?.map((option) => (
                         <Box
                             key={option?.name}
                             css={{

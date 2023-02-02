@@ -1,16 +1,16 @@
 const thisBreadcrumb = [
   {
-    title: "Rock Description",
+    title: "Organic Rock Geochemistry Analyses",
     url: "/oil_and_gas/rock_description",
   },
 ];
 
 const breadcrumb = {
-  "Rock Description": thisBreadcrumb,
+  "Organic Rock Geochemistry Analyses": thisBreadcrumb,
 };
 
 export default {
-  title: "Rock Description",
+  title: "Organic Rock Geochemistry Analyses",
   url: "/oil_and_gas/rock_description",
   breadcrumb,
 };

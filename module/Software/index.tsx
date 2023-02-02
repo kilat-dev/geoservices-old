@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import Box from "reusables/Box";
 import { Card, Image, Text, Col, Row } from "@nextui-org/react";
 import TextLink from "reusables/TextLink";
 import { companies, composeEmailLink, products } from "./constants";
 import Slider from "react-slick";
 
-const openLightbox = (setLightBoxStatus: Function, setContent: Function, image: string, email?: any) => () => {
+const openLightbox = (setLightBoxStatus: Function, setContent: Function, image: string, email?: any, desc: string) => () => {
     setContent({
         image,
-        email: email ? email : {}
+        email: email ? email : {},
+        desc
     });
     setLightBoxStatus(true);
 };
@@ -56,21 +57,12 @@ const renderLightbox = (
           }}>
               x
           </button>
-          {content.image && <img src={content.image} />}
+          {content.image && <img src={content.image} style={{ width: 400 }}/>}
           <div style={{
               marginTop: 20,
               color: 'gray'
           }}>
-              Neuralog provides practical and intuitive solutions for the oil and gas industry. From scanning, digitizing and printing, to organizing and analyzing your data and getting answers about hydrocarbon reserves, each step of your workflow is supported with Neuralog Professional Solutions.
-              <br />
-              <br />
-              Each Neuralog product contributes to your interpretation workflow. NeuraLog's automated digitizing tools set the industry standards for raster-to-vector conversion. NeuraMap calculates Volumetrics and Reserves for your digitized map; and also provides interactive map data capture tools. NeuraSection's powerful interpretation transforms logs, maps, and external data into custom cross sections and montages. NeuraScanner with NeuraView is a one-of-a-kind solution for capturing and storing valuable paper well logs.
-              <br />
-              <br />
-              Logs can then be printed with the NeuraLaserColor high-speed log printer. Neuralog solutions are available to geoscience professionals around the world. Neuralog headquarters is located in Houston, Texas, the heartland of oil and gas.
-              <br />
-              <br />
-              Neuralog also has direct representatives in North and South America and Europe. Neuralog products are used in Schlumberger/GeoQuest data conversion service centers worldwide and can be found in over 70 countries.
+              {content.desc}
           </div>
           <a href={content.email ? composeEmailLink(content.email) : composeEmailLink({
               to: 'quotation@geoservices.com',
@@ -91,6 +83,22 @@ const renderLightbox = (
   </div>
 );
 
+const apiToken = '2ec67e19c8e68e464b98e935cbc43d59ea77c11d983120eb3d234d097cd7aff18771692acaa390be0f09bae1a134c6205553c888c90a3a69687edc730d9e92106283f875b54b9530a41124eec5e7fa6410ba4685b12d5b879f2de1f4c87b280d1cf9f979b3b87a7f76fb8bed79acf4d8bf3ec2546666b60cd5c8c44619a79ad4';
+const callAPI = async (setProductData) => {
+    try {
+        const res = await fetch(`http://localhost:1337/api/softwares?populate=*`, {
+            headers: {
+                Authorization: `Bearer ${apiToken}`
+            }
+        });
+        const data = await res.json();
+        console.log(data, '1');
+        setProductData(data);
+    } catch (err) {
+        console.log(err);
+    }
+};
+
 const Software = () => {
   const settings = {
     arrows: true,
@@ -103,6 +111,11 @@ const Software = () => {
 
   const [isActive, setLightBoxStatus] = useState(false);
   const [content, setContent] = useState({});
+  const [productData, setProductData] = useState([]);
+
+  useEffect(() => {
+      callAPI(setProductData);
+  }, []);
 
   return (
       <>
@@ -286,38 +299,46 @@ const Software = () => {
                       paddingBottom: 60
                   }}
               >
-                  {products?.map((item) => (
-                      <div onClick={openLightbox(setLightBoxStatus, setContent, item.logo)}>
-                      <Card
-                          key={item?.name}
-                          variant="bordered"
-                          css={{ borderRadius: 0, borderWidth: 0 }}
-                      >
-                          <Card.Body>
-                              <Box
-                                  css={{
-                                      height: "100%",
-                                      display: "grid",
-                                      gridAutoColumns: "1fr",
-                                      gridTemplateRows: "1fr auto",
-                                  }}
+                  {productData.data && productData.data.map((item) => {
+                      const imageUrl = `http://localhost:1337${item.attributes.image.data.attributes.url}`;
+                      const contentDesc = item.attributes.description;
+
+                      return(
+                          <div onClick={openLightbox(setLightBoxStatus, setContent, imageUrl, '', contentDesc)}>
+                              <Card
+                                  key={item.attributes.title}
+                                  variant="bordered"
+                                  css={{ borderRadius: 0, borderWidth: 0 }}
                               >
-                                  <Box css={{ display: "flex", alignItems: "center" }}>
-                                      <Image src={item?.logo} style={{ height: 200 }}/>
-                                  </Box>
-                                  <Box
-                                      css={{
-                                          marginTop: 12,
-                                          textAlign: 'center'
-                                      }}
-                                  >
-                                      {item.name}
-                                  </Box>
-                              </Box>
-                          </Card.Body>
-                      </Card>
-                      </div>
-                  ))}
+                                  <Card.Body>
+                                      <Box
+                                          css={{
+                                              height: "100%",
+                                              display: "grid",
+                                              gridAutoColumns: "1fr",
+                                              gridTemplateRows: "1fr auto",
+                                          }}
+                                      >
+                                          <Box css={{ display: "flex", alignItems: "center" }}>
+                                              <Image src={imageUrl} style={{ height: 200 }}/>
+                                          </Box>
+                                          <Box
+                                              css={{
+                                                  marginTop: 12,
+                                                  textAlign: 'center'
+                                              }}
+                                          >
+                                              {item.attributes.title} by {item.attributes.principal}
+                                              <div>
+                                                  {item.attributes.location && item.attributes.location}
+                                              </div>
+                                          </Box>
+                                      </Box>
+                                  </Card.Body>
+                              </Card>
+                          </div>
+                      )
+                  })}
               </Box>
 
               {/* Card #3 */}

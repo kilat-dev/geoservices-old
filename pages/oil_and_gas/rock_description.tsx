@@ -13,7 +13,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      text: "ROCK DESCRIPTION",
+      text: "Organic Rock Geochemistry Analyses",
       backgroundImage: imgBackground,
       breadcrumb: getBreadcrumb(PAGE.title),
     },

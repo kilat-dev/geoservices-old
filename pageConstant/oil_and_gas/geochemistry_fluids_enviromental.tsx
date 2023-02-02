@@ -1,16 +1,16 @@
 const thisBreadcrumb = [
   {
-    title: "Geochemistry Fluids Enviromental",
+    title: "Geochemistry Fluid Enviromental",
     url: "/oil_and_gas/geochemistry_fluids_enviromental",
   },
 ];
 
 const breadcrumb = {
-  "Geochemistry Fluids Enviromental": thisBreadcrumb,
+  "Geochemistry Fluid Enviromental": thisBreadcrumb,
 };
 
 export default {
-  title: "Geochemistry Fluids Enviromental",
+  title: "Geochemistry Fluid Enviromental",
   url: "/oil_and_gas/geochemistry_fluids_enviromental",
   breadcrumb,
 };
