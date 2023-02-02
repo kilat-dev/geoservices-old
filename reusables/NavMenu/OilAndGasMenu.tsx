@@ -12,7 +12,6 @@ import {
   laboratoryOptions,
   softwareOptions,
 } from "./constants";
-import {useRouter} from "next/router";
 
 export const MainMenu = ({ onChange, selected }: NavMainMenuProps) => {
   const handleSelect = (selectedMenu: string) => () => {
@@ -262,7 +261,14 @@ export const LaboratorySubMenu = () => {
                 },
             });
             const data = await res.json();
-            setProductData(data);
+            const mappedData = data.data.map((item, index) => {
+                return ({
+                    label: item.attributes.Laboratory,
+                    name: item.attributes.Laboratory,
+                    href: `/oil_and_gas/geolab/${index}`
+                })
+            });
+            setProductData(mappedData);
         } catch (err) {
             console.log(err);
         }
@@ -270,9 +276,7 @@ export const LaboratorySubMenu = () => {
 
     useEffect(() => {
         callAPI(setProductData);
-    }, []);
-
-    console.log(product);
+    }, [product]);
 
     return (
         <>
@@ -305,7 +309,7 @@ export const LaboratorySubMenu = () => {
                         gridTemplateColumns: "1fr 1fr",
                     }}
                 >
-                    {laboratoryOptions?.map((option) => (
+                    {product?.map((option) => (
                         <Box
                             key={option?.name}
                             css={{
