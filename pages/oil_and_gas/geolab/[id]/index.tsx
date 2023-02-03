@@ -8,8 +8,27 @@ import ImageJumbotron from "../../../../reusables/ImageJumbotron";
 import Footer from "../../../../module/BasicLayout/Footer";
 import Modal from "../../../../reusables/Modal/Modal";
 import BreadCrumbLine from "../../../../reusables/BreadcrumbLine";
-import { breadcrumbData } from "./index.config";
 import { API_KEY, API_BASE_URL } from "../../../../pageConstant/general";
+
+const breadcrumbData = (labTitle: string) => [
+    {
+        title: "Home",
+        url: "/",
+    },
+    {
+        title: "Oil and Gas",
+        url: "/oil_and_gas",
+    },
+    {
+        title: "Geolab",
+        url: "/oil_and_gas/geolab",
+    },
+    {
+        title: labTitle,
+        url: "#",
+        textColor: "rgb(230, 142, 103)",
+    },
+];
 
 const GeolabSub = () => {
   const router = useRouter();
