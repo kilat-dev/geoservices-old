@@ -87,6 +87,7 @@ const GeolabSub = () => {
           css={{
             marginTop: 30,
             display: "flex",
+              flexWrap: "wrap"
           }}
         >
           {images &&
@@ -99,15 +100,16 @@ const GeolabSub = () => {
                   cover: API_BASE_URL + item.thumbnail.data.attributes.url,
                   images: item.images.data,
                 })}
-                style={{ marginRight: 20 }}
+                style={{ marginRight: 20, marginBottom: 40 }}
               >
                 <Image
                   src={API_BASE_URL + item.thumbnail.data.attributes.url}
-                  width={280}
+                  width={270}
                   height={160}
                   objectFit={"cover"}
                   style={{
                     borderRadius: 12,
+                      border: '1px solid gainsboro'
                   }}
                 />
                 <div style={{
@@ -211,108 +213,6 @@ const GeolabSub = () => {
                   ></Text>
               </Box>
           </Box>
-
-        <Box
-          css={{
-            marginTop: 120,
-            marginBottom: 100,
-            borderTop: "4px solid #E68E67",
-            boxShadow: "0px 4px 4px 0px #0000001A",
-            p: "44px 193px 44px 52px",
-          }}
-        >
-          <Box
-            css={{
-              position: "relative",
-              marginTop: -79.5,
-          }}>
-            <Text
-              css={{
-                fontWeight: "700",
-                fontSize: "16px",
-                lineHeight: "24px",
-                background: openTab === 1 ? "#E68E67" : "white",
-                color: openTab === 1 ? "white" : "#E68E67",
-                padding: "10px 20px",
-                marginBottom: 20,
-                display: "inline-block",
-                borderTopLeftRadius: 12,
-                borderTopRightRadius: 12,
-              }}
-              onClick={handleTab(1)}
-            >
-              PRODUCT DESCRIPTION
-            </Text>
-            <Text
-              css={{
-                fontWeight: "700",
-                fontSize: "16px",
-                lineHeight: "24px",
-                background: openTab === 2 ? "#E68E67" : "white",
-                color: openTab === 2 ? "white" : "#E68E67",
-                padding: "10px 20px",
-                marginBottom: 20,
-                marginLeft: 20,
-                display: "inline-block",
-                borderTopLeftRadius: 12,
-                borderTopRightRadius: 12,
-              }}
-              onClick={handleTab(2)}
-            >
-              GENERAL INFORMATION
-            </Text>
-          </Box>
-          <Box>
-            {openTab === 1 && (
-              <Text
-                css={{
-                fontWeight: "400",
-                fontSize: "16px",
-                lineHeight: "30px",
-                color: "#828282",
-                  whiteSpace: "pre-line",
-                }}
-                dangerouslySetInnerHTML={{ __html: data && data.Description }}
-              ></Text>
-            )}
-            {openTab === 2 && (
-              <Text
-                css={{
-                fontWeight: "400",
-                fontSize: "16px",
-                lineHeight: "30px",
-                color: "#828282",
-              }}
-            >
-              {data && data.Laboratory}
-              </Text>
-            )}
-            {openTab === 2 && (
-              <Text
-                css={{
-                  fontWeight: "400",
-                fontSize: "16px",
-                lineHeight: "30px",
-                color: "#828282",
-              }}
-              >
-                Industry : {data && data.Industry}
-              </Text>
-            )}
-            {openTab === 2 && (
-              <Text
-                css={{
-                fontWeight: "400",
-                fontSize: "16px",
-                lineHeight: "30px",
-                color: "#828282",
-                }}
-            >
-                Location : {data && data.Location}
-              </Text>
-            )}
-          </Box>
-        </Box>
         <h2>Other Geolab Laboratories</h2>
         <Box
           css={{
@@ -322,7 +222,7 @@ const GeolabSub = () => {
           }}
         >
           {allData &&
-            allData.slice(0, 5).map(
+            allData.slice(0, 6).map(
                 (item, index) =>
                   index.toString() !== router.query.id && <div style={{
                       marginRight: 20,
@@ -331,8 +231,8 @@ const GeolabSub = () => {
                       <div>
                         <Image
                           src={API_BASE_URL + item.attributes.Banner.data.attributes.url}
-                          width={280}
-                          height={160}
+                          width={222}
+                          height={124}
                           objectFit={"cover"}
                           style={{
                             borderRadius: 12,
