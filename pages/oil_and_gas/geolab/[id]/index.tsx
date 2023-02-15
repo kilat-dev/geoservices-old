@@ -61,6 +61,7 @@ const GeolabSub = () => {
   const banner = data && data.Banner && data.Banner.data.attributes.url;
   const labTitle = data && data.Laboratory;
   const products = data && data.products;
+  console.log(allData);
 
   const handleTab = (index) => () => {
     chooseTab(index);
@@ -101,7 +102,7 @@ const GeolabSub = () => {
                 style={{ marginRight: 20 }}
               >
                 <Image
-                  src={"http://localhost:1337" + item.thumbnail.data.attributes.url}
+                  src={API_BASE_URL + item.thumbnail.data.attributes.url}
                   width={280}
                   height={160}
                   objectFit={"cover"}
@@ -329,7 +330,7 @@ const GeolabSub = () => {
                     <Link key={index + 'lab'} href={'/oil_and_gas/geolab/' + index}>
                       <div>
                         <Image
-                          src={"http://localhost:1337" + item.attributes.Banner.data.attributes.url}
+                          src={API_BASE_URL + item.attributes.Banner.data.attributes.url}
                           width={280}
                           height={160}
                           objectFit={"cover"}

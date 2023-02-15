@@ -1,6 +1,7 @@
 import React from "react";
 import Box from "reusables/Box";
 import { Image, Text } from "@nextui-org/react";
+import { API_BASE_URL } from "../pageConstant/general";
 
 export interface ImageJumbotronProps {
   imageSrc: string;
@@ -18,7 +19,7 @@ const ImageJumbotron = ({
   return (
     <Box css={{ width: "100%", position: "relative" }}>
         <img
-            src={"http://localhost:1337" + '/uploads/overlay_d705da266e.png'}
+            src={API_BASE_URL + '/uploads/overlay_d705da266e.png'}
             style={{
                 width: '100%',
                 height: 390,
