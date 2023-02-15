@@ -121,6 +121,96 @@ const GeolabSub = () => {
             ))}
         </Box>
 
+          <Box
+              css={{
+                  marginTop: 40,
+                  marginBottom: 40,
+                  borderTop: "4px solid #E68E67",
+                  boxShadow: "0px 4px 4px 0px #0000001A",
+                  p: "44px 193px 44px 52px",
+              }}
+          >
+              <Box
+                  css={{
+                      position: "relative",
+                  }}>
+              </Box>
+              <Box>
+                  <h3 style={{
+                      color: "#E68E67",
+                      marginTop: 0,
+                      paddingTop: 0,
+                  }}>
+                      GENERAL INFORMATION
+                  </h3>
+                  <Text
+                      css={{
+                          fontWeight: "400",
+                          fontSize: "16px",
+                          lineHeight: "30px",
+                          color: "#828282",
+                      }}
+                  >
+                      {data && data.Laboratory}
+                  </Text>
+                  <Text
+                      css={{
+                          fontWeight: "400",
+                          fontSize: "16px",
+                          lineHeight: "30px",
+                          color: "#828282",
+                      }}
+                  >
+                      Industry : {data && data.Industry}
+                  </Text>
+                  <Text
+                      css={{
+                          fontWeight: "400",
+                          fontSize: "16px",
+                          lineHeight: "30px",
+                          color: "#828282",
+                      }}
+                  >
+                      Location : {data && data.Location}
+                  </Text>
+              </Box>
+          </Box>
+
+          <Box
+              css={{
+                  marginTop: 40,
+                  marginBottom: 40,
+                  borderTop: "4px solid #E68E67",
+                  boxShadow: "0px 4px 4px 0px #0000001A",
+                  p: "44px 193px 44px 52px",
+              }}
+          >
+              <Box
+                  css={{
+                      position: "relative",
+                  }}>
+              </Box>
+              <Box>
+                  <h3 style={{
+                      color: "#E68E67",
+                      marginTop: 0,
+                      paddingTop: 0,
+                  }}>
+                      PRODUCT DESCRIPTION
+                  </h3>
+                  <Text
+                      css={{
+                          fontWeight: "400",
+                          fontSize: "16px",
+                          lineHeight: "30px",
+                          color: "#828282",
+                          whiteSpace: "pre-line",
+                      }}
+                      dangerouslySetInnerHTML={{ __html: data && data.Description }}
+                  ></Text>
+              </Box>
+          </Box>
+
         <Box
           css={{
             marginTop: 120,
