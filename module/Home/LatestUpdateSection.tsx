@@ -1,13 +1,140 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-import { Text, Container, Row, Spacer, Card } from "@nextui-org/react";
+import { Text, Container, Row, Spacer, Card, Image } from "@nextui-org/react";
 import { BsArrowRight } from "react-icons/bs";
 import Box from "reusables/Box";
 
+import Slider from "react-slick";
+import { API_BASE_URL, API_KEY } from "../../pageConstant/general";
+
+const news = [
+  {
+    image:
+      "https://www.geoservices.co.id/wp-content/uploads/2019/04/Mineral-analysis.jpg",
+    category: "Video",
+    title: "Sludge Oil Liquefaction System (Sols) With Paralax(R)",
+    action: "Watch",
+    url: "",
+  },
+  {
+    image:
+      "https://www.geoservices.co.id/wp-content/uploads/2019/04/Mineral-analysis.jpg",
+    title:
+      "Webinar Series With Theme ” The Age of Digital Transformation Part 2",
+    category: "Event",
+    action: "Read",
+    url: "",
+  },
+  {
+    image:
+      "https://www.geoservices.co.id/wp-content/uploads/2019/04/Mineral-analysis.jpg",
+    category: "Video",
+    title: "Sludge Oil Liquefaction System (Sols) With Paralax(R)",
+    action: "Watch",
+    url: "",
+  },
+];
+
+const settings = {
+  dots: true,
+  dotsClass: "slick-dots slick-thumb",
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
+
+const NewsItem = ({ category, title, action, url, image }) => {
+  return (
+    <div>
+      <div
+        style={{
+          display: "flex",
+          width: "100%",
+        }}
+      >
+        <Image src={image} width={"50%"} height={340} objectFit={"cover"} />
+        <div
+          style={{
+            padding: 40,
+            background: "whitesmoke",
+            width: "50%",
+          }}
+        >
+          <Text
+            css={{
+              color: "#363C9A",
+              fontStyle: "normal",
+              fontWeight: "700",
+              fontSize: "14px",
+              lineHeight: "18px",
+              marginBottom: 20,
+            }}
+          >
+            {category}
+          </Text>
+          <Text
+            css={{
+              color: "#000000",
+              fontStyle: "normal",
+              fontWeight: "400",
+              fontSize: "32px",
+              lineHeight: "39px",
+              marginBottom: 60,
+            }}
+          >
+            {title}
+          </Text>
+          <div
+            style={{
+              display: "flex",
+            }}
+          >
+            <Text
+              css={{
+                mr: "$10",
+                fontStyle: "normal",
+                fontWeight: "700",
+                fontSize: "16px",
+                lineHeight: "20px",
+              }}
+            >
+              {action}
+            </Text>
+            <BsArrowRight color="#EC1C24" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const LatestUpdateSection = () => {
+  const [newsData, setNewsData] = useState([]);
+
+  const callAPI = async (setNewsData) => {
+    try {
+      const res = await fetch(`${API_BASE_URL}/api/news?populate=deep`, {
+        headers: {
+          Authorization: `Bearer ${API_KEY}`,
+        },
+      });
+      const data = await res.json();
+      setNewsData(data.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    callAPI(setNewsData);
+  }, []);
+
+  console.log(newsData);
+
   return (
     <>
-      <Box css={{ my: "$20", maxWidth: '1240px', margin: '80px auto' }}>
+      <Box css={{ my: "$20", maxWidth: "1240px", margin: "80px auto" }}>
         {/* TITLE */}
         <Row align="center" gap={4} css={{ mb: "$6" }}>
           <Box
@@ -25,247 +152,24 @@ const LatestUpdateSection = () => {
             Latest Update
           </Text>
         </Row>
-        <Box
-          css={{
-            display: "grid",
-            gridAutoColumns: "1fr",
-            gridTemplateColumns: "1fr 1fr 1fr",
+        <div
+          style={{
+            padding: 20,
           }}
         >
-          {/* CARD 1 */}
-          <Box css={{ mx: "$10" }}>
-            <Card
-              css={{
-                height: "100%",
-                backgroundColor: "#F8F8F8",
-                boxShadow: "10px 10px #E0E0E0",
-                p: "20px",
-              }}
-            >
-              <Row css={{ pt: "$10" }}>
-                <Text
-                  css={{
-                    color: "#363C9A",
-                    fontStyle: "normal",
-                    fontWeight: "700",
-                    fontSize: "14px",
-                    lineHeight: "18px",
-                  }}
-                >
-                  Video
-                </Text>
-              </Row>
-              <Spacer y={1} />
-
-              <Row>
-                <Text
-                  css={{
-                    color: "#000000",
-                    fontStyle: "normal",
-                    fontWeight: "400",
-                    fontSize: "32px",
-                    lineHeight: "39px",
-                  }}
-                >
-                  Sludge Oil Liquefaction System (Sols) With Paralax(R)
-                </Text>
-              </Row>
-
-              <Spacer y={2} />
-              <Row align="flex-end" css={{ height: "100%" }}>
-                <Card
-                  isPressable
-                  variant="flat"
-                  css={{
-                    width: "fit-content",
-                    backgroundColor: "transparent",
-                    p: "10px 10px 10px 10px",
-                  }}
-                >
-                  <Container
-                    css={{
-                      p: 0,
-                      width: "fit-content",
-                      display: "flex",
-                      flexDirection: "row",
-                      alignItems: "center",
-                    }}
-                  >
-                    <Text
-                      css={{
-                        mr: "$10",
-                        fontStyle: "normal",
-                        fontWeight: "700",
-                        fontSize: "16px",
-                        lineHeight: "20px",
-                      }}
-                    >
-                      Watch
-                    </Text>
-                    <BsArrowRight color="#EC1C24" />
-                  </Container>
-                </Card>
-              </Row>
-            </Card>
-          </Box>
-
-          {/* CARD 2 */}
-          <Box css={{ mx: "$10" }}>
-            <Card
-              css={{
-                height: "100%",
-                backgroundColor: "#F8F8F8",
-                boxShadow: "10px 10px #E0E0E0",
-                p: "20px",
-              }}
-            >
-              <Row css={{ pt: "$10" }}>
-                <Text
-                  css={{
-                    color: "#363C9A",
-                    fontStyle: "normal",
-                    fontWeight: "700",
-                    fontSize: "14px",
-                    lineHeight: "18px",
-                  }}
-                >
-                  Event
-                </Text>
-              </Row>
-              <Spacer y={1} />
-
-              <Row>
-                <Text
-                  css={{
-                    color: "#000000",
-
-                    fontStyle: "normal",
-                    fontWeight: "400",
-                    fontSize: "32px",
-                    lineHeight: "39px",
-                  }}
-                >
-                  Webinar Series With Theme ” The Age of Digital Transformation”
-                  Part 2
-                </Text>
-              </Row>
-
-              <Spacer y={2} />
-              <Row align="flex-end" css={{ height: "100%" }}>
-                <Card
-                  isPressable
-                  variant="flat"
-                  css={{
-                    width: "fit-content",
-                    backgroundColor: "transparent",
-                    p: "10px 10px 10px 10px",
-                  }}
-                >
-                  <Container
-                    css={{
-                      p: 0,
-                      width: "fit-content",
-                      display: "flex",
-                      flexDirection: "row",
-                      alignItems: "center",
-                    }}
-                  >
-                    <Text
-                      css={{
-                        mr: "$10",
-                        fontStyle: "normal",
-                        fontWeight: "700",
-                        fontSize: "16px",
-                        lineHeight: "20px",
-                      }}
-                    >
-                      Read
-                    </Text>
-                    <BsArrowRight color="#EC1C24" />
-                  </Container>
-                </Card>
-              </Row>
-            </Card>
-          </Box>
-
-          {/* CARD 3 */}
-          <Box css={{ mx: "$10" }}>
-            <Card
-              css={{
-                height: "100%",
-                backgroundColor: "#F8F8F8",
-                boxShadow: "10px 10px #E0E0E0",
-                p: "20px",
-              }}
-            >
-              <Row css={{ pt: "$10" }}>
-                <Text
-                  css={{
-                    color: "#363C9A",
-                    fontStyle: "normal",
-                    fontWeight: "700",
-                    fontSize: "14px",
-                    lineHeight: "18px",
-                  }}
-                >
-                  Video
-                </Text>
-              </Row>
-              <Spacer y={1} />
-
-              <Row>
-                <Text
-                  css={{
-                    color: "#000000",
-
-                    fontStyle: "normal",
-                    fontWeight: "400",
-                    fontSize: "32px",
-                    lineHeight: "39px",
-                  }}
-                >
-                  Sludge Oil Liquefaction System (Sols) With Paralax(R)
-                </Text>
-              </Row>
-
-              <Spacer y={2} />
-              <Row align="flex-end" css={{ height: "100%" }}>
-                <Card
-                  isPressable
-                  variant="flat"
-                  css={{
-                    width: "fit-content",
-                    backgroundColor: "transparent",
-                    p: "10px 10px 10px 10px",
-                  }}
-                >
-                  <Container
-                    css={{
-                      p: 0,
-                      width: "fit-content",
-                      display: "flex",
-                      flexDirection: "row",
-                      alignItems: "center",
-                    }}
-                  >
-                    <Text
-                      css={{
-                        mr: "$10",
-                        fontStyle: "normal",
-                        fontWeight: "700",
-                        fontSize: "16px",
-                        lineHeight: "20px",
-                      }}
-                    >
-                      Watch
-                    </Text>
-                    <BsArrowRight color="#EC1C24" />
-                  </Container>
-                </Card>
-              </Row>
-            </Card>
-          </Box>
-        </Box>
+          <Slider {...settings}>
+            {newsData && newsData.map((item, index) => (
+              <NewsItem
+                key={index}
+                category={'Video'}
+                title={item.attributes.title}
+                action={'Read'}
+                url={item.url || ""}
+                image={'https://www.geoservices.co.id/wp-content/uploads/2019/04/Mineral-analysis.jpg'}
+              />
+            ))}
+          </Slider>
+        </div>
       </Box>
     </>
   );
