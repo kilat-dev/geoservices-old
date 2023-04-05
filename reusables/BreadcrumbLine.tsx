@@ -34,6 +34,7 @@ const BreadCrumbLine = ({ items, ...rest }: BreadCrumbLineProps) => {
                   fontWeight: "400",
                   fontSize: "16px",
                   lineHeight: "19px",
+                  textTransform: "capitalize",
                 }}
                 href={item.url}
               >

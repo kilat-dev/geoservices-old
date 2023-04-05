@@ -37,7 +37,6 @@ const Header = () => {
   const logo = "/assets/logo2.png";
 
   const router = useRouter();
-  console.log(router.pathname);
 
   return (
     <Box css={{ minHeight: "80px" }}>
@@ -102,7 +101,7 @@ const Header = () => {
             />
           </Box>
 
-          <Link
+          <TextLink
             css={{
               height: "100%",
               display: "none",
@@ -122,7 +121,7 @@ const Header = () => {
               objectFit="contain"
               style={{ marginTop: "-1.5px" }}
             />
-          </Link>
+          </TextLink>
 
           <Box
             css={{
@@ -169,8 +168,8 @@ const Header = () => {
                   </Text>
                 </Nav>
 
-                <Text
-                  css={{
+                <TextLink
+                  textCSS={{
                     ...headerTextCSS,
                     ...mainMenu,
                     cursor: "pointer",
@@ -178,12 +177,18 @@ const Header = () => {
                       color: "$gray700",
                     },
                     height: "100%",
+                    paddingLeft: 0,
+                    paddingRight: 0,
+                    borderColor: router.pathname.includes("coal")
+                      ? "#D3252C"
+                      : "transparent",
                   }}
+                  href={"/coal"}
                 >
                   Coal and Minerals
-                </Text>
-                <Text
-                  css={{
+                </TextLink>
+                <TextLink
+                  textCSS={{
                     ...headerTextCSS,
                     ...mainMenu,
                     cursor: "pointer",
@@ -191,12 +196,18 @@ const Header = () => {
                       color: "$gray700",
                     },
                     height: "100%",
+                    paddingLeft: 0,
+                    paddingRight: 0,
+                    borderColor: router.pathname.includes("geothermal")
+                      ? "#D3252C"
+                      : "transparent",
                   }}
+                  href={"/geothermal"}
                 >
                   Geothermal
-                </Text>
-                <Text
-                  css={{
+                </TextLink>
+                <TextLink
+                  textCSS={{
                     ...headerTextCSS,
                     ...mainMenu,
                     cursor: "pointer",
@@ -204,10 +215,17 @@ const Header = () => {
                       color: "$gray700",
                     },
                     height: "100%",
+                    marginLeft: 10,
+                    paddingLeft: 0,
+                    paddingRight: 0,
+                    borderColor: router.pathname.includes("trade_and_services")
+                      ? "#D3252C"
+                      : "transparent",
                   }}
+                  href={"/trade_and_services"}
                 >
                   Trade and Services
-                </Text>
+                </TextLink>
               </Row>
             </Box>
 

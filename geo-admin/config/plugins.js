@@ -1,7 +1,3 @@
 module.exports = ({ env }) => ({
-  //...
-  'import-export-entries': {
-    enabled: true,
-  },
-  //...
+  'import-export-entries': true
 });

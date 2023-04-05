@@ -6,15 +6,16 @@ import Box from "reusables/Box";
 
 import Slider from "react-slick";
 import { API_BASE_URL, API_KEY } from "../../pageConstant/general";
+import TextLink from "../../reusables/TextLink";
 
 const news = [
   {
     image:
-      "https://www.geoservices.co.id/wp-content/uploads/2019/04/Mineral-analysis.jpg",
-    category: "Video",
-    title: "Sludge Oil Liquefaction System (Sols) With Paralax(R)",
-    action: "Watch",
-    url: "",
+      "https://www.geoservices.co.id/wp-content/uploads/2022/10/Geoservices-Booth-1300x720.jpg",
+    category: "News",
+    title: "PT Geoservices at IPA 2022 Convention",
+    action: "Read",
+    url: "/news/pt-geoservices-ipa-2022-convention",
   },
   {
     image:
@@ -23,7 +24,7 @@ const news = [
       "Webinar Series With Theme ” The Age of Digital Transformation Part 2",
     category: "Event",
     action: "Read",
-    url: "",
+      url: "/news/pt-geoservices-ipa-2022-convention",
   },
   {
     image:
@@ -31,7 +32,7 @@ const news = [
     category: "Video",
     title: "Sludge Oil Liquefaction System (Sols) With Paralax(R)",
     action: "Watch",
-    url: "",
+      url: "/news/pt-geoservices-ipa-2022-convention",
   },
 ];
 
@@ -85,10 +86,11 @@ const NewsItem = ({ category, title, action, url, image }) => {
           >
             {title}
           </Text>
-          <div
+          <TextLink
             style={{
               display: "flex",
             }}
+            href={url}
           >
             <Text
               css={{
@@ -102,7 +104,7 @@ const NewsItem = ({ category, title, action, url, image }) => {
               {action}
             </Text>
             <BsArrowRight color="#EC1C24" />
-          </div>
+          </TextLink>
         </div>
       </div>
     </div>
@@ -130,8 +132,6 @@ const LatestUpdateSection = () => {
     callAPI(setNewsData);
   }, []);
 
-  console.log(newsData);
-
   return (
     <>
       <Box css={{ my: "$20", maxWidth: "1240px", margin: "80px auto" }}>
@@ -158,16 +158,27 @@ const LatestUpdateSection = () => {
           }}
         >
           <Slider {...settings}>
-            {newsData && newsData.map((item, index) => (
-              <NewsItem
-                key={index}
-                category={'Video'}
-                title={item.attributes.title}
-                action={'Read'}
-                url={item.url || ""}
-                image={'https://www.geoservices.co.id/wp-content/uploads/2019/04/Mineral-analysis.jpg'}
-              />
-            ))}
+            {/* {newsData && newsData.map((item, index) => (*/}
+            {/*  <NewsItem*/}
+            {/*    key={index}*/}
+            {/*    category={'Video'}*/}
+            {/*    title={item.attributes.title}*/}
+            {/*    action={'Read'}*/}
+            {/*    url={item.url || ""}*/}
+            {/*    image={'https://www.geoservices.co.id/wp-content/uploads/2019/04/Mineral-analysis.jpg'}*/}
+            {/*  />*/}
+            {/* ))}*/}
+            {news &&
+              news.map((item, index) => (
+                <NewsItem
+                  key={index}
+                  category={item.category}
+                  title={item.title}
+                  action={"Read"}
+                  url={item.url || ""}
+                  image={item.image}
+                />
+              ))}
           </Slider>
         </div>
       </Box>
