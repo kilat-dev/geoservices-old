@@ -51,8 +51,10 @@ const Tab = ({ tabItems }) => {
         <div style={styles.tabContent}>
           {tabItems.map((item, index) => (
             <div style={styles.tabContentParagraph}>
-              {Array.isArray(item.content.data) ?
-                renderArrayContent(item.content, index) :
+              {activeTab === index && item.content.render && item.content.render}
+              {Array.isArray(item.content.data) &&
+                renderArrayContent(item.content, index)}
+              {typeof item.content.data === "string" &&
                 renderStringContent(item.content, index)}
             </div>
           ))}
